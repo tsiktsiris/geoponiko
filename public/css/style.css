@@ -3029,7 +3029,12 @@ table.shopping-cart > tbody > tr > td {
 }
 
 #brands.primary-background {
-  background-color: rgb(132,188,111);
+  background-color: white;
+  background-image: url('../images/grass.png');
+  background-size: 100% 70px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  z-index: 10000;
 }
 
 #brands.dark h3 {
