@@ -11,7 +11,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="http://placehold.it/240x120" alt="logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="./images/logo-lg.png" alt="logo"></a>
             </div><!-- / navbar-header -->
             <div class="secondary-nav">
                 <a href="#" class="my-account space-right"><i class="fa fa-user"></i> ΕΙΣΟΔΟΣ</a>

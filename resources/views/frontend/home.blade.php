@@ -21,7 +21,10 @@
         <div class="row">
             <div class="col-sm-6 collection">
                 <a href="#">
-                    <img src="http://placehold.it/1200x1000" alt="">
+                  <div class="img-overlay">
+                    <img src="./images/fytofarmaka.jpg" alt="">
+                      <div class="project-overlay"><center>ΦΥΤΟΦΑΡΜΑΚΑ</center></div>
+                    </div>
                 </a>
             </div>
             <!-- / collection -->
@@ -29,17 +32,26 @@
                 <div class="row">
                     <div class="col-sm-12 collection">
                         <a href="#">
-                            <img src="http://placehold.it/1200x500" alt="">
+                          <div class="img-overlay">
+                            <img src="./images/fyta.jpg" alt="">
+                            <div class="project-overlay"><center>ΣΠΟΡΟΙ - ΦΥΤΑ</center></div>
+                            </div>
                         </a>
                     </div><!-- / collection -->
                     <div class="col-sm-6 collection">
                         <a href="#">
-                            <img src="http://placehold.it/1200x920" alt="">
+                          <div class="img-overlay">
+                            <img src="./images/ydreush.jpg" alt="">
+                            <div class="project-overlay"><center><small><small>ΣΥΣΤΗΜΑΤΑ ΥΔΡΕΥΣΗΣ</small></small></center></div>
+                          </div>
                         </a>
                     </div><!-- / collection -->
                     <div class="col-sm-6 collection">
                         <a href="#">
-                            <img src="http://placehold.it/1200x920" alt="">
+                          <div class="img-overlay">
+                            <img src="./images/ergaleia.jpg" alt="">
+                            <div class="project-overlay"><center><small><small>ΕΡΓΑΛΕΙΑ ΚΗΠΟΥ</small></small></center></div>
+                          </div>
                         </a>
                     </div><!-- / collection -->
                 </div><!-- / row -->
@@ -60,8 +72,8 @@
                     <div class="feature-icon">
                         <i class="lnr lnr-gift"></i>
                     </div>
-                    <h5>FREE SHIPPING</h5>
-                    <p>Free worldwide shipping</p>
+                    <h5>ΔΩΡΕΑΝ ΜΕΤΑΦΟΡΙΚΑ</h5>
+                    <p>Δωρεάν μεταφορικά για παραγγελίες άνω των 50€</p>
                 </div>
             </div><!-- / col-md-4 -->
             <!-- / feature-block -->
@@ -72,8 +84,8 @@
                     <div class="feature-icon">
                         <i class="lnr lnr-clock"></i>
                     </div>
-                    <h5>FAST DELIVERY</h5>
-                    <p>Fast worldwide delivery</p>
+                    <h5>ΓΡΗΓΟΡΗ ΑΠΟΣΤΟΛΗ</h5>
+                    <p>Γρήγορη πανελλαδική αποστολή όπου και αν βρίσκεστε</p>
                 </div>
             </div><!-- / col-md-4 -->
             <!-- / feature-block -->
@@ -84,8 +96,8 @@
                     <div class="feature-icon">
                         <i class="lnr lnr-exit"></i>
                     </div>
-                    <h5>MONEY BACK</h5>
-                    <p>30 Days money back</p>
+                    <h5>ΕΓΓΥΗΣΗ ΧΡΗΜΑΤΩΝ</h5>
+                    <p>Εγγύηση επιστροφής χρημάτων μέσα σε διάστημα 30 ημερών</p>
                 </div>
             </div><!-- / col-md-4 -->
             <!-- / feature-block -->
@@ -104,18 +116,18 @@
             <!-- product -->
             <li class="col-xs-6 col-md-4 product m-product" data-groups='["mens"]'>
                 <div class="img-bg-color primary">
-                    <h5 class="product-price">$49</h5>
-                    <a href="single-product.html" class="product-link"></a>
+                    <h5 class="product-price">49€</h5>
+                    <a href="#" class="product-link"></a>
                     <!-- / product-link -->
                     <img src="http://placehold.it/900x1200" alt="">
                     <!-- / product-image -->
 
                     <!-- product-hover-tools -->
                     <div class="product-hover-tools">
-                        <a href="single-product.html" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
+                        <a href="#" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
                             <i class="lnr lnr-eye"></i>
                         </a>
-                        <a href="shopping-cart.html" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
+                        <a href="#" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
                             <i class="lnr lnr-cart"></i>
                         </a>
                     </div><!-- / product-hover-tools -->
@@ -132,18 +144,18 @@
             <!-- product -->
             <li class="col-xs-6 col-md-4 product m-product" data-groups='["womens", "accessories"]'>
                 <div class="img-bg-color primary">
-                    <h5 class="product-price"><del>$159</del> $79</h5>
-                    <a href="single-product.html" class="product-link"></a>
+                    <h5 class="product-price"><del>159€</del> 79€</h5>
+                    <a href="#" class="product-link"></a>
                     <!-- / product-link -->
                     <img src="http://placehold.it/900x1200" alt="">
                     <!-- / product-image -->
 
                     <!-- product-hover-tools -->
                     <div class="product-hover-tools">
-                        <a href="single-product.html" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
+                        <a href="#" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
                             <i class="lnr lnr-eye"></i>
                         </a>
-                        <a href="shopping-cart.html" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
+                        <a href="#" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
                             <i class="lnr lnr-cart"></i>
                         </a>
                     </div><!-- / product-hover-tools -->
@@ -160,18 +172,18 @@
             <!-- product -->
             <li class="col-xs-6 col-md-4 product m-product" data-groups='["mens"]'>
                 <div class="img-bg-color primary">
-                    <h5 class="product-price">$39</h5>
-                    <a href="single-product.html" class="product-link"></a>
+                    <h5 class="product-price">39€</h5>
+                    <a href="#" class="product-link"></a>
                     <!-- / product-link -->
                     <img src="http://placehold.it/900x1200" alt="">
                     <!-- / product-image -->
 
                     <!-- product-hover-tools -->
                     <div class="product-hover-tools">
-                        <a href="single-product.html" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
+                        <a href="#" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
                             <i class="lnr lnr-eye"></i>
                         </a>
-                        <a href="shopping-cart.html" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
+                        <a href="#" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
                             <i class="lnr lnr-cart"></i>
                         </a>
                     </div><!-- / product-hover-tools -->
@@ -188,18 +200,18 @@
             <!-- product -->
             <li class="col-xs-6 col-md-4 product m-product" data-groups='["accessories"]'>
                 <div class="img-bg-color primary">
-                    <h5 class="product-price">$189</h5>
-                    <a href="single-product.html" class="product-link"></a>
+                    <h5 class="product-price">189€</h5>
+                    <a href="#" class="product-link"></a>
                     <!-- / product-link -->
                     <img src="http://placehold.it/900x1200" alt="">
                     <!-- / product-image -->
 
                     <!-- product-hover-tools -->
                     <div class="product-hover-tools">
-                        <a href="single-product.html" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
+                        <a href="#" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
                             <i class="lnr lnr-eye"></i>
                         </a>
-                        <a href="shopping-cart.html" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
+                        <a href="#" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
                             <i class="lnr lnr-cart"></i>
                         </a>
                     </div><!-- / product-hover-tools -->
@@ -216,18 +228,18 @@
             <!-- product -->
             <li class="col-xs-6 col-md-4 product m-product" data-groups='["womens"]'>
                 <div class="img-bg-color primary">
-                    <h5 class="product-price">$69</h5>
-                    <a href="single-product.html" class="product-link"></a>
+                    <h5 class="product-price">69€</h5>
+                    <a href="#" class="product-link"></a>
                     <!-- / product-link -->
                     <img src="http://placehold.it/900x1200" alt="">
                     <!-- / product-image -->
 
                     <!-- product-hover-tools -->
                     <div class="product-hover-tools">
-                        <a href="single-product.html" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
+                        <a href="#" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
                             <i class="lnr lnr-eye"></i>
                         </a>
-                        <a href="shopping-cart.html" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
+                        <a href="#" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
                             <i class="lnr lnr-cart"></i>
                         </a>
                     </div><!-- / product-hover-tools -->
@@ -244,18 +256,18 @@
             <!-- product -->
             <li class="col-xs-6 col-md-4 product m-product" data-groups='["accessories"]'>
                 <div class="img-bg-color primary">
-                    <h5 class="product-price">$359</h5>
-                    <a href="single-product.html" class="product-link"></a>
+                    <h5 class="product-price">359€</h5>
+                    <a href="#" class="product-link"></a>
                     <!-- / product-link -->
                     <img src="http://placehold.it/900x1200" alt="">
                     <!-- / product-image -->
 
                     <!-- product-hover-tools -->
                     <div class="product-hover-tools">
-                        <a href="single-product.html" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
+                        <a href="#" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
                             <i class="lnr lnr-eye"></i>
                         </a>
-                        <a href="shopping-cart.html" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
+                        <a href="#" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
                             <i class="lnr lnr-cart"></i>
                         </a>
                     </div><!-- / product-hover-tools -->
@@ -285,16 +297,16 @@
     <h2 class="hidden">&nbsp;</h2>
     <div class="container">
         <div id="brands-carousel" class="owl-carousel">
-            <div class="item"><img src="http://placehold.it/350x150" alt=""></div>
-            <div class="item"><img src="http://placehold.it/350x150" alt=""></div>
-            <div class="item"><img src="http://placehold.it/350x150" alt=""></div>
-            <div class="item"><img src="http://placehold.it/350x150" alt=""></div>
-            <div class="item"><img src="http://placehold.it/350x150" alt=""></div>
-            <div class="item"><img src="http://placehold.it/350x150" alt=""></div>
-            <div class="item"><img src="http://placehold.it/350x150" alt=""></div>
-            <div class="item"><img src="http://placehold.it/350x150" alt=""></div>
-            <div class="item"><img src="http://placehold.it/350x150" alt=""></div>
-            <div class="item"><img src="http://placehold.it/350x150" alt=""></div>
+            <div class="item"><img src="./images/bottom/10.jpg" alt=""></div>
+            <div class="item"><img src="./images/bottom/2.jpg" alt=""></div>
+            <div class="item"><img src="./images/bottom/3.jpg" alt=""></div>
+            <div class="item"><img src="./images/bottom/4.jpg" alt=""></div>
+            <div class="item"><img src="./images/bottom/5.jpg" alt=""></div>
+            <div class="item"><img src="./images/bottom/6.jpg" alt=""></div>
+            <div class="item"><img src="./images/bottom/7.jpg" alt=""></div>
+            <div class="item"><img src="./images/bottom/8.jpg" alt=""></div>
+            <div class="item"><img src="./images/bottom/9.jpg" alt=""></div>
+            <div class="item"><img src="./images/bottom/1.jpg" alt=""></div>
         </div>
     </div><!-- / container -->
 </section>

@@ -7,7 +7,7 @@
                 <div class="col-md-4 widget">
                     <div class="about-widget">
                         <div class="widget-title-image">
-                            <img src="http://placehold.it/240x120" alt="">
+                            <img style="width:250px;max-height:100px!important" src="./images/logo-lg.png" alt="">
                         </div>
                         <p>
                           Το Γεωπονικό Kέντρο Ιστιαίας είναι ένα κατάστημα λιανικής πώλησης γεωργικών φαρμάκων, λιπασμάτων και λοιπών αγροτικών εφοδίων.
