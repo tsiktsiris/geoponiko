@@ -311,3 +311,4 @@
     </div><!-- / container -->
 </section>
 <!-- / brands carousel -->
+@endsection
