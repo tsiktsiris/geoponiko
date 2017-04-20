@@ -2420,7 +2420,7 @@ section {
   display: inline-block;
   color: #333333;
   background-color: white;
-  padding-top: 14px;
+  //padding-top: 14px;
   width: 42px;
   height: 42px;
   text-align: center;
@@ -2440,7 +2440,7 @@ section {
   display: inline-block;
   color: white;
   background-color: #333333;
-  padding-top: 14px;
+  //padding-top: 14px;
   width: 42px;
   height: 42px;
   text-align: center;
