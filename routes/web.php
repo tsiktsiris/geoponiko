@@ -12,3 +12,13 @@
 */
 
 Route::get('/', 'HomeController@index')->name('frontend.home');
+
+
+
+Route::group(['prefix' => 'admin'], function () {
+  Route::get('/', 'Admin\HomeController@index')->name('backend.home');
+  //Route::get('/login', 'Auth\LoginController@login')->name('login');
+  Route::get('/login', 'Auth\LoginController@login')->name('backend.login');
+  Route::post('/login', 'Auth\LoginController@authenticate')->name('backend.authenticate');
+  Route::get('/logout', 'Auth\LoginController@logout')->name('backend.logout');
+});
