@@ -1885,7 +1885,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
   min-width: 100px;
   padding: 10px;
   margin-top: 5px;
-  margin-left: -35px;
+  margin-left: 5px;
   background-color: white;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -1948,7 +1948,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 
 .navbar-default .navbar-nav > li > a {
   color: #111111;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
 }
 

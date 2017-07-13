@@ -10,7 +10,7 @@
         <img src="#" class="img-circle" alt="User Image" />
       </div>
       <div class="pull-left info">
-        <p>sdfg</p>
+        <p>{{Auth::user()->name}}</p>
         <!-- Status -->
         <a href="#"><i class="fa fa-circle text-success"></i> Συνδεδεμένος</a>
       </div>
@@ -33,7 +33,18 @@
       <!-- Optionally, you can add icons to the links-->
       <li class="{!! classActivePath('home') !!}"><a href="{{ route('backend.home') }}"><span>Αρχική</span></a></li>
       <li class="treeview {!! classActiveSegment(1,['ΟΣΔΕ']) !!}">
-        <a href="#"><span>Ενιαία Αίτηση Ενίσχυσης</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <a href="#"><span>Παραγγελίες</span> <i class="fa fa-angle-left pull-right"></i></a>
+
+        <li class="treeview {!! classActiveSegment(2,['categories']) !!}">
+          <a href="#"><span>Κατηγορίες προϊόντων</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li class="{!! classActiveSegment(3,['main']) !!}"><a href="{{route('backend.category.index')}}">Κατηγορίες</a></li>
+            <li class="{!! classActiveSegment(3,['sub']) !!}"><a href="{{route('backend.subcategory.index')}}">Υποκατηγορίες</a></li>
+          </ul>
+        </li>
+        <br>
+        <br>
+
       <li class="treeview {!! classActiveSegment(1,['Ρυθμίσεις']) !!}">
         <a href="#"><span>Ρυθμίσεις</span> <i class="fa fa-angle-left pull-right"></i></a>
         <ul class="treeview-menu">

@@ -32,21 +32,16 @@
           </ul>
         </li><!-- /.messages-menu -->
 
-
-
         <!-- User Account Menu -->
         <li class="dropdown">
           <!-- Menu Toggle Button -->
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <!-- hidden-xs hides the username on small devices so only the image appears.<li class="divider"></li> -->
-            <span class="username"></span>
+            <span class="username">{{Auth::user()->name}}</span>
           </a>
           <ul class="dropdown-menu">
-
               <li><a href="{{ route('backend.home') }}">Ρύθμιση λογαριασμού</a></li>
-              <li><a href="{{ route('backend.home') }}">Αποσύνδεση</a></li>
-
-
+              <li><a href="{{ route('backend.logout') }}">Αποσύνδεση</a></li>
           </ul>
         </li>
       </ul>

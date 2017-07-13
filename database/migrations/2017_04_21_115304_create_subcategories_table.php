@@ -20,6 +20,7 @@ class CreateSubcategoriesTable extends Migration
           $table->string('description')->nullable();
           $table->integer('category_id')->unsigned()->default(1);
           $table->foreign('category_id')->references('id')->on('categories');
+          $table->integer('priority')->nullable();
         });
 
         DB::table('subcategories')->insert([

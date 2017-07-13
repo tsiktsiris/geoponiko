@@ -31,9 +31,10 @@ class LoginController extends Controller
 
       if($user)
       {
-        if(Hash::check($password, $user->password))
+        if (Auth::attempt(['email' => $email, 'password' => $password],true))
+
         {
-            $this->login($user->id, $password);
+            //$this->login($user->id, $password);
             return redirect()->route('backend.home');
         }
         else
@@ -41,8 +42,6 @@ class LoginController extends Controller
       }
 
       return redirect()->route('backend.login');
-
-
 
     }
 
