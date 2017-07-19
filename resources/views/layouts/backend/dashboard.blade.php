@@ -109,8 +109,6 @@ body {
     <!-- AdminLTE App -->
     <script src="{{ asset ("js/backend/app.js") }}" type="text/javascript"></script>
 
-    <script src="{{ asset ("js/backend/chat.js") }}" type="text/javascript"></script>
-
     <script src="{{ asset ("js/backend/select2.min.js") }}" type="text/javascript"></script>
     @yield('javascript');
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
