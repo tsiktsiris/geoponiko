@@ -16,7 +16,7 @@
     <div class="panel panel-default">
 
         <div class="panel-body">
-            <a class="btn btn-primary pull-left" href="{{route('backend.subcategory.new')}}" role="button">Προσθήκη εγγραφής</a>
+            <a class="btn btn-primary pull-left" href="{{route('backend.products.new')}}" role="button">Προσθήκη εγγραφής</a>
 
 
         </div>
@@ -27,20 +27,20 @@
                         <th></th>
                         <th>ΟΝΟΜΑ</th>
                         <th>ΠΕΡΙΓΡΑΦΗ</th>
-                        <th>ΚΑΤΗΓΟΡΙΑ</th>
+                        <th>ΠΡΟΤΕΡΑΙΟΤΗΤΑ</th>
                         <th>ΕΝΕΡΓΕΙΕΣ</th>
                     </tr>
                 </thead>
                 <tbody>
                     @forelse ($items as $item)
                     <tr>
-                        <td>{{ $item->id }}</td>
-                        <td><a href="#">{{ $item->name }}</a></td>
-                        <td><a href="#">{{ $item->description }}</a></td>
-                        <td>{{ $categories[$item->category_id] }}</td>
+                        <td>{{$item->id}}</td>
+                        <td><a href="#">{{$item->name}}</a></td>
+                        <td><a href="#">{{$item->description}}</a></td>
+                        <td><a href="#">{{$item->priority}}</a></td>
                         <td width="250px">
                           <a class="btn btn-primary btn-xs" href="#" role="button">Τροποποίηση</a>
-                          <a class="btn btn-danger btn-xs" href="#" role="button">Διαγραφή</a>
+                          <a class="btn btn-danger btn-xs" href="{{route('backend.products.delete',$item->id)}}" role="button">Διαγραφή</a>
 
                         </td>
                     </tr>

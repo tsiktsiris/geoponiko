@@ -176,6 +176,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Anam\Phpcart\CartServiceProvider::class,
 
     ],
 
@@ -227,6 +228,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Cart' => Anam\Phpcart\Facades\Cart::class,
     ],
 
 ];

@@ -11,24 +11,50 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="./images/logo-lg.png" alt="logo"></a>
-            </div><!-- / navbar-header -->
+                <a class="navbar-brand" href="index.html"><img src="{{asset('./images/logo-lg.png')}}" alt="logo"></a>
+            </div><!-- / navbar-header <span class="cart-badge">2</span> -->
             <div class="secondary-nav">
-                <a href="#" class="my-account space-right"><i class="fa fa-user"></i> ΕΙΣΟΔΟΣ</a>
+                <a href="#" class="my-account space-right"><i class="fa fa-user"></i> </a>
+                <a href="{{route('frontend.cart')}}" class="shopping-cart"><i class="fa fa-shopping-cart"></i>
 
+                  <?php
+
+                  $cart = Session::get('phpcart');
+
+                   ?>
+                   @if($cart)
+                  @if($cart->count() != 0)
+                  <span class="cart-badge">{{$cart->count()}}</span>
+                  @endif
+                  @endif
+
+                 </a>
             </div>
 
             <div class="navbar-collapse collapse text-center">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#"><span>ΑΡΧΙΚΗ</span></a></li>
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>ΛΙΠΑΣΜΑΤΑ/ΦΑΡΜΑΚΑ</span> <span class="dropdown-icon"></span></a>
+                    <li class="{!! classActivePath('/') !!}"><a href="{{route('frontend.home')}}"><span>ΑΡΧΙΚΗ</span></a></li>
+
+
+                    @foreach($categories as $category)
+
+                    <li class="dropdown
+                    @foreach($category->getSubCategories as $subcategory)
+                    {!! classActivePath('shop/'.$subcategory->id) !!}
+                    @endforeach
+
+
+                    ">
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>{{$category->name}}</span> <span class="dropdown-icon"></span></a>
                     <ul class="dropdown-menu animated fadeIn fast">
-                        <li><a href="#"><span>ΛΙΠΑΣΜΑΤΑ</span></a></li>
-                        <li><a href="#"><span>ΦΑΡΜΑΚΑ</span></a></li>
+                      @foreach($category->getSubCategories as $subcategory)
+                        <li class="{!! classActivePath('shop/'.$subcategory->id) !!}"><a href="{{route('frontend.shop',$subcategory->id)}}"><span>{{$subcategory->name}}</span></a></li>
+                      @endforeach
                     </ul>
                     </li>
-
+                    @endforeach
+                    <!--
                     <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>ΣΠΟΡΟΙ/ΦΥΤΑ</span> <span class="dropdown-icon"></span></a>
                     <ul class="dropdown-menu animated fadeIn fast">
@@ -64,8 +90,9 @@
                         <li><a href="#"><span>ΕΞΑΡΤΗΜΑΤΑ</span></a></li>
                     </ul>
                     </li>
-
+                  -->
                     <li><a href="#"><span>ΠΡΟΣΦΟΡΕΣ</span></a></li>
+
                 </ul>
             </div><!--/ nav-collapse -->
         </div><!-- / container -->

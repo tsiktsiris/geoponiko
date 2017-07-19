@@ -14,7 +14,8 @@ class SubCategoryController extends Controller
     public function index()
     {
       $items = SubCategory::paginate(15);
-      return view('backend.subcategory.index')->with('items',$items);
+      $categories = Category::pluck('name','id');
+      return view('backend.subcategory.index')->with('items',$items)->with('categories', $categories);
     }
 
     public function new()
@@ -27,6 +28,7 @@ class SubCategoryController extends Controller
     {
       //dd($request->name);
       $category  = new SubCategory();
+      $category -> category_id = $request->category;
       $category -> name = $request->name;
       $category -> description = $request->description;
       $category -> priority = 0;

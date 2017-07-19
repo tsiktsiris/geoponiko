@@ -1,6 +1,6 @@
 @extends('layouts.backend.dashboard')
-@php ( $title='Χρήστης' )
-@php ( $description='Προσθήκη')
+@php ( $title='Προϊόντα' )
+@php ( $description='Νέο προϊόν')
 @section('content')
 <div class='row'>
 
@@ -19,18 +19,17 @@
 
         <div class="panel-body">
       <div class="col-md-12">
-              {{ Form::open(array('action' => 'Admin\SubCategoryController@store')) }}
-
+              {{ Form::open(array('action' => 'Admin\ProductController@store','files' => true)) }}
               <div class="row">
                 <div class="col-md-12">
-                  {{ Form::label('Κατηγορία') }}
-                  {{ Form::select('category', $categories, null,array('class' => 'form-control', 'placeholder' => 'Επιλέξτε...')) }}
+                  {{ Form::label('Τύπος') }}
+                  {{ Form::select('subcategory', $subcategories,null,array('class' => 'form-control', 'placeholder' => 'Επιλέξτε...')) }}
                 </div>
               </div>
               <br>
               <div class="row">
                 <div class="col-md-12">
-                  {{ Form::label('Όνομα υποκατηγορίας') }}
+                  {{ Form::label('Όνομα') }}
                   {{ Form::text('name', null,array('class' => 'form-control')) }}
                 </div>
               </div>
@@ -38,12 +37,21 @@
               <div class="row">
                 <div class="col-md-12">
                   {{ Form::label('Περιγραφή') }}
-                  {{ Form::text('description', null,array('class' => 'form-control')) }}
+                  {{ Form::textarea('description', null,array('class' => 'form-control')) }}
                 </div>
               </div>
-                <br>
-
-                {{ Form::submit('Προσθήκη κατηγορίας',array('class' => 'btn btn-primary')) }}
+              <br>
+              {{ Form::label('Φωτογραφία') }}
+              {{ Form::file('product_photo1') }}
+              <br>
+              <div class="row">
+                <div class="col-md-2">
+                  {{ Form::label('Τιμή (σε Ευρώ)') }}
+                  {{ Form::number('price', null,array('class' => 'form-control')) }}
+                </div>
+              </div>
+                <hr>
+                {{ Form::submit('Προσθήκη εγγραφής',array('class' => 'btn btn-primary')) }}
                 <a class="btn btn-danger" href="{{ route('backend.category.index')}}" role="button">Ακύρωση</a>
 
                 <!-- /.box-body -->

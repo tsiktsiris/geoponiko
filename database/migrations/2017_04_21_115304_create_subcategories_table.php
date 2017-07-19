@@ -23,9 +23,9 @@ class CreateSubcategoriesTable extends Migration
           $table->integer('priority')->nullable();
         });
 
-        DB::table('subcategories')->insert([
-            ['name' => 'Χωρίς Υποκατηγορία', 'description' => 'Η κατηγορία αυτή περιέχει τα προϊόντα χωρίς υποκατηγορία']
-        ]);
+        //DB::table('subcategories')->insert([
+        //    ['name' => 'Χωρίς Υποκατηγορία', 'description' => 'Η κατηγορία αυτή περιέχει τα προϊόντα χωρίς υποκατηγορία']
+        //]);
     }
 
 

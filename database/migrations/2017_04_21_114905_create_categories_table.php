@@ -21,9 +21,9 @@ class CreateCategoriesTable extends Migration
             $table->integer('priority')->nullable();
         });
 
-        DB::table('categories')->insert([
-            ['name' => 'Χωρίς Κατηγορία', 'description' => 'Η κατηγορία αυτή περιέχει τα προϊόντα που δεν έχουν ταξινομηθεί']
-        ]);
+        //DB::table('categories')->insert([
+        //    ['name' => 'Χωρίς Κατηγορία', 'description' => 'Η κατηγορία αυτή περιέχει τα προϊόντα που δεν έχουν ταξινομηθεί']
+        //]);
     }
 
 

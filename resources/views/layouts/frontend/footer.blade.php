@@ -7,7 +7,7 @@
                 <div class="col-md-4 widget">
                     <div class="about-widget">
                         <div class="widget-title-image">
-                            <img style="width:250px;max-height:100px!important" src="./images/logo-lg.png" alt="">
+                            <img style="width:250px;max-height:100px!important" src="{{asset('./images/logo-lg.png')}}" alt="">
                         </div>
                         <p>
                           Το Γεωπονικό Kέντρο Ιστιαίας είναι ένα κατάστημα λιανικής πώλησης γεωργικών φαρμάκων, λιπασμάτων και λοιπών αγροτικών εφοδίων.
@@ -26,10 +26,10 @@
                             <p><i class="lnr lnr-map-marker"></i><span>1o χλμ Ιστιαίας-Αιδηψού</span></p>
                         </div>
                         <div class="info">
-                            <a href="tel:+0123456789"><i class="lnr lnr-phone-handset"></i><span>22260 53649</span></a>
+                            <a href="tel:+0123456789"><i class="lnr lnr-phone-handset"></i><span>2226053649</span></a>
                         </div>
                         <div class="info">
-                            <a href="mailto:"><i class="lnr lnr-envelope"></i><span>Email</span></a>
+                            <a href="mailto:baroutis.d.86@gmail.com"><i class="lnr lnr-envelope"></i><span>baroutis.d.86@gmail.com</span></a>
                         </div>
                         <div class="info">
                             <i class="lnr lnr-thumbs-up"></i>
@@ -54,10 +54,10 @@
                     <p><small><strong>(c) 2017-2018 tsiktsiris@sch.gr</small></strong></p>
                 </div>
                 <span class="pull-right">
-                    <img src="images/visa.png" alt="">
-                    <img src="images/mastercard.png" alt="">
-                    <img src="images/discover.png" alt="">
-                    <img src="images/paypal.png" alt="">
+                    <img src="{{asset('images/visa.png')}}" alt="">
+                    <img src="{{asset('images/mastercard.png')}}" alt="">
+                    <img src="{{asset('images/discover.png')}}" alt="">
+                    <img src="{{asset('images/paypal.png')}}" alt="">
                 </span>
         </div><!-- / container -->
     </div><!-- / footer-info -->

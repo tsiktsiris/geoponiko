@@ -4,8 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "75ba431fb4ccf48ce8a358d938bb8d86",
+    "content-hash": "7fd057de2c082337119385fd31658dfa",
     "packages": [
+        {
+            "name": "anam/phpcart",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/anam-hossain/phpcart.git",
+                "reference": "a00570f87622d8d9dfe630d1250bff3a013d1188"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/anam-hossain/phpcart/zipball/a00570f87622d8d9dfe630d1250bff3a013d1188",
+                "reference": "a00570f87622d8d9dfe630d1250bff3a013d1188",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0",
+                "symfony/http-foundation": "~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Anam\\Phpcart\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anam hossain",
+                    "email": "enam33@gmail.com"
+                }
+            ],
+            "description": "Simple framework agnostic shopping cart",
+            "homepage": "https://github.com/anam-hossain/phpcart",
+            "keywords": [
+                "Laravel cart",
+                "Laravel shopping cart",
+                "cart",
+                "php cart",
+                "shopping cart"
+            ],
+            "time": "2017-04-02T07:22:35+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
