@@ -19,6 +19,7 @@ Route::get('/cart', 'CartController@index')->name('frontend.cart');
 Route::get('/cart/add/{id}/{qty}', 'CartController@add_item')->name('frontend.cart.add');
 Route::get('/cart/update/{id}/{qty}', 'CartController@update_item')->name('frontend.cart.update');
 Route::get('/cart/remove/{id}', 'CartController@remove_item')->name('frontend.cart.remove');
+Route::get('/checkout', 'HomeController@checkout')->name('frontend.checkout');
 
 Route::group(['prefix' => 'admin'], function () {
   Route::get('/', 'Admin\HomeController@index')->name('backend.home');

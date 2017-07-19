@@ -16,8 +16,17 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('cart_id')->unsigned();
-            $table->foreign('cart_id')->references('id')->on('carts');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('mobiletel');
+            $table->string('address');
+            $table->string('city');
+            $table->string('zipcode');
+            $table->text('notes');
+            $table->string('afm')->nullable();
+            $table->string('company')->nullable();
+            $table->boolean('invoice')->nullable();
+
         });
     }
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\SubCategory;
 use App\Product;
+use Session;
 
 class HomeController extends Controller
 {
@@ -52,12 +53,23 @@ class HomeController extends Controller
 
     public function cart()
     {
-
-
       $categories = Category::all();
       $subcategories = SubCategory::all();
       //dd($products);
       return view('frontend.cart')->with('categories',$categories)->with('subcategories',$subcategories);
+    }
+
+
+    public function checkout()
+    {
+      $cart = Session::get('phpcart');
+
+      $categories = Category::all();
+      $subcategories = SubCategory::all();
+      //dd($products);
+      return view('frontend.checkout')->with('categories',$categories)->with('subcategories',$subcategories)->with('cart',$cart);
+
+
     }
 
 

@@ -27,13 +27,15 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-      //dd($request->name);
-
       $product  = new Product();
+      $product -> category_id = SubCategory::find($request->subcategory)->category_id;
       $product -> subcategory_id = $request->subcategory;
       $product -> name = $request->name;
       $product -> description = $request->description;
       $product -> price = $request->price;
+      $product -> dprice = $request->price;
+      $product -> views = 0;
+      $product -> sold = 0;
       //$product -> description = $request->description;
       $product -> save();
 

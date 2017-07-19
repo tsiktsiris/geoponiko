@@ -74,7 +74,7 @@
             <div class="col-sm-6 cart-checkout">
               @if($items->count()>0)
                 <!--<a href="shop-right.html" class="btn btn-default-filled btn-rounded"><i class="lnr lnr-cart"></i> <span>Συνέχιση αγοράς</span></a>-->
-                <a href="checkout.html" class="btn btn-primary-filled btn-rounded"><i class="lnr lnr-exit"></i> <span>Συνέχεια αγοράς</span></a>
+                <a href="{{route('frontend.checkout')}}" class="btn btn-primary-filled btn-rounded"><i class="lnr lnr-exit"></i> <span>Συνέχεια παραγγελίας</span></a>
                   @endif
             </div><!-- / cart-checkout -->
             @if($items->count()==0)
