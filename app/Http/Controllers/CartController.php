@@ -13,27 +13,7 @@ class CartController extends Controller
 {
   //public $cart;
   private  $cart;
-    /*
-    public function index()
-    {
 
-      $items = Session::get('cart.items');
-
-      $citems = collect();
-      if($items)
-      {
-        foreach($items as $item)
-          $citems->push(Product::find($item));
-
-      }
-      //dd($citems);
-
-      $categories = Category::all();
-      $subcategories = SubCategory::all();
-      //dd($products);
-      return view('frontend.cart')->with('categories',$categories)->with('subcategories',$subcategories)->with('items',$citems);
-    }
-    */
     function __construct ()
     {
         //$this->cart = Session::get('cart');
@@ -42,55 +22,61 @@ class CartController extends Controller
 
     public function index()
     {
-      //$cart->setCart('cart1');
-
       $this->cart = Session::get('phpcart');
-      //$this->cart = $this->cart->clear();
-      //Session::flush();
-    //  Session::forget('phpcart');
-      //Session::put('phpcart',$this->cart);
-      //dd($this->cart);
 
       if($this->cart)
         $citems = $this->cart->items();
-      else {
+      else
         $citems = collect();
-      }
 
       $categories = Category::all();
       $subcategories = SubCategory::all();
-      //dd($products);
       return view('frontend.cart')->with('categories',$categories)->with('subcategories',$subcategories)->with('items',$citems);
     }
 
-    public function add_item($id)
+    public function add_item($id,$qty)
     {
 
       $product = Product::find($id);
 
       $this->cart = Session::get('phpcart');
+
       if(!$this->cart)
       $this->cart = new Cart();
-
-      //$_SESSION['myCart'] = ;
 
       Session::put('phpcart', $this->cart);
       $this->cart->add([
           'id'       => $product->id,
           'name'     => $product->name,
-          'quantity' => 1,
+          'quantity' => $qty,
           'price'    => $product->price,
           'product_photo1' => $product->product_photo1
       ]);
 
-      //dd($this->cart);
       return redirect()->back();
+    }
+
+    public function update_item($id,$qty)
+    {
+      $product = Product::find($id);
+
+      $this->cart = Session::get('phpcart');
+
+      Session::put('phpcart', $this->cart);
+
+      $this->cart->update([
+          'id'       => $product->id,
+          'quantity' => $qty
+      ]);
+
+      return "1";
     }
 
     public function remove_item($id)
     {
       $this->cart = Session::get('phpcart');
       $this->cart->remove($id);
+
       return redirect()->back();
     }
 
@@ -98,6 +84,7 @@ class CartController extends Controller
     {
       $this->cart = Session::get('phpcart');
       $this->cart->destroy();
+
       return redirect()->back();
     }
 

@@ -100,6 +100,7 @@ $(document).ready(function(){
 
 <!-- hide nav -->
 <script src="{{asset('js/hide-nav.js')}}"></script>
+
 <!-- / hide nav -->
 @yield('js')
 <!-- / javascript -->

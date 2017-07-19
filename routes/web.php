@@ -16,7 +16,8 @@ Route::get('/shop/{cat}', 'HomeController@shop')->name('frontend.shop');
 Route::get('/viewproduct/{id}', 'HomeController@viewproduct')->name('frontend.viewproduct');
 
 Route::get('/cart', 'CartController@index')->name('frontend.cart');
-Route::get('/cart/add/{id}', 'CartController@add_item')->name('frontend.cart.add');
+Route::get('/cart/add/{id}/{qty}', 'CartController@add_item')->name('frontend.cart.add');
+Route::get('/cart/update/{id}/{qty}', 'CartController@update_item')->name('frontend.cart.update');
 Route::get('/cart/remove/{id}', 'CartController@remove_item')->name('frontend.cart.remove');
 
 Route::group(['prefix' => 'admin'], function () {

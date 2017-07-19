@@ -58,7 +58,7 @@
                             <p><i class="lnr lnr-tag"></i><span>Τιμή: {{$product->price}}</span></p>
                         </div>
                         <div class="info">
-                            <p><i class="lnr lnr-heart"></i><span>Κατηφορία: <a href="#"> {{$product->getCategory->name}}</a></span></p>
+                            <p><i class="lnr lnr-heart"></i><span>Κατηγορία: <a href="#"> {{$product->getCategory->name}}</a></span></p>
                         </div>
                         <div class="info">
                             <p><i class="lnr lnr-menu"></i><span>Κωδικός προϊόντος: {{str_pad($product->id,6,"0",STR_PAD_LEFT)}}</span></p>
@@ -67,13 +67,13 @@
 
                     <div class="buy-product">
                         <div class="options">
-                            Ποσότητα: <input type="number" step="1" min="0" name="cart" value="1" title="Qty" class="input-text qty text" size="4">
+                            Ποσότητα: <input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="input-text qty text" size="4">
                         </div>
                         <!-- / options -->
 
                         <div class="space-25">&nbsp;</div>
 
-                        <a href="{{route('frontend.cart.add',$product->id)}}" class="btn btn-primary-filled btn-rounded"><i class="lnr lnr-cart"></i><span> Προσθήκη στο καλάθι</span></a>
+                        <a id="clink" href="{{route('frontend.cart.add',['id'=>$product->id,'qty'=>1] )}}" class="btn btn-primary-filled btn-rounded"><i class="lnr lnr-cart"></i><span> Προσθήκη στο καλάθι</span></a>
                         <a href="checkout.html" class="btn btn-success-filled btn-rounded"><i class="lnr lnr-heart"></i><span> Αγορά τώρα</span></a>
                     </div>
 
@@ -126,4 +126,15 @@
     </div><!-- / container -->
 </section>
 <!-- / shop single-product -->
+@endsection
+
+@section('js')
+<script>
+$('input[name*="quantity"]').change(function() {
+  var target = $("#clink").attr("href");
+  var l = target.lastIndexOf('/');
+  target = target.substring(0, l);
+  $("#clink").attr("href", target + '/'+$(this).val());
+});
+</script>
 @endsection

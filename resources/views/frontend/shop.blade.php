@@ -40,7 +40,7 @@
                                 <a href="{{route('frontend.viewproduct',$product->id)}}" class="view-btn" data-toggle="tooltip" title="Προβολή">
                                     <i class="lnr lnr-eye"></i>
                                 </a>
-                                <a href="{{route('frontend.cart.add',$product->id)}}" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
+                                <a href="{{route('frontend.cart.add',['id'=>$product->id,'qty'=>1] )}}" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
                                     <i class="lnr lnr-cart"></i>
                                 </a>
                             </div><!-- / product-hover-tools -->
@@ -70,51 +70,7 @@
 
             <div class="col-sm-4 col-md-3 sidebar-area">
 
-                <!-- filter-by-price widget -->
-                <div class="widget">
-                    <h5 class="widget-title">FILTER BY PRICE</h5>
 
-                    <div id="range-slider" class="noUi-target noUi-rtl noUi-horizontal">
-                    </div><!-- / range-slider -->
-
-                    <div class="range-filter">
-                        <div class="column filter-button">
-                            <button type="submit" class="btn btn-xs btn-default-filled btn-rounded">FILTER</button>
-                        </div><!-- / filter-button -->
-                        <div class=" column range-values">
-                            <p>$<span class="value" id="range-slider-value-min"></span> - $<span class="value" id="range-slider-value-max"></span></p>
-                        </div><!-- / range-values -->
-                    </div><!-- / range-filter -->
-                    <!-- / filter-by-price widget -->
-                </div>
-                <!-- / widget -->
-
-                <!-- price-filter widget -->
-                <div class="price-filter widget">
-                    <h5 class="widget-title">PRICE FILTER</h5>
-
-                    <p class="filter-item">
-                        <a href="#">$1-$100</a>
-                    </p><!-- / filter-item -->
-
-                    <p class="filter-item">
-                        <a href="#">$100-$200</a>
-                    </p><!-- / filter-item -->
-
-                    <p class="filter-item">
-                        <a href="#">$200-$300</a>
-                    </p><!-- / filter-item -->
-
-                    <p class="filter-item">
-                        <a href="#">$300-$400</a>
-                    </p><!-- / filter-item -->
-
-                    <p class="filter-item">
-                        <a href="#">$400-$500</a>
-                    </p><!-- / filter-item -->
-
-                </div>
-                <!-- / price-filter widget -->
 
 
 
