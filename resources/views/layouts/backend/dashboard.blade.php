@@ -56,7 +56,7 @@ body {
             {{ $title or "No title" }}
             <small>{{ $description or null }}</small>
           </h1>
-          <!-- You can dynamically generate breadcrumbs here ".  $path = app('request')->root().'/'.$segment ." -->
+          <!-- You can dynamically generate breadcrumbs here ".  $path = app('request')->root().'/'.$segment ."
 
           <ol class="breadcrumb">
           <li><a href=" {{ route('backend.home') }}"><i class="fa fa-dashboard"></i>Αρχική</a></li>
@@ -83,6 +83,7 @@ body {
 
 
           </ol>
+          -->
         </section>
         @endif
         <!-- Main content -->
