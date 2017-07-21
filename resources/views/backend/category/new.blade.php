@@ -1,6 +1,6 @@
 @extends('layouts.backend.dashboard')
-@php ( $title='Χρήστης' )
-@php ( $description='Προσθήκη')
+@php ( $title='Κατηγορίες' )
+@php ( $description='Νέα κατηγορία')
 @section('content')
 <div class='row'>
 
