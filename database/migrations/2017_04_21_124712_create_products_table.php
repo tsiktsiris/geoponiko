@@ -30,6 +30,7 @@ class CreateProductsTable extends Migration
             $table->text('description')->nullable();
             $table->decimal('price',5,2);
             $table->decimal('dprice',5,2);
+            $table->decimal('addcost',5,2)->nullable();
             $table->integer('views')->unsigned();
             $table->integer('sold')->unsigned();
             $table->boolean('availability')->default(true);

@@ -7,33 +7,38 @@
         <div class="row checkout-screen">
             <div class="col-sm-8 checkout-form">
                 <h4 class="space-left">Ολοκλήρωση παραγγελίας</h4>
-                <p class="space-left have-account space-bottom">Έχετε ήδη λογαριασμό; <a href="login-register.html"><span>Συνδεθείτε</span></a></p>
+                <p class="space-left have-account space-bottom">Έχετε ήδη λογαριασμό; <a href="#"><span>Συνδεθείτε</span></a></p>
+                <form class="form-horizontal" role="form" method="POST" action="{{ route('frontend.order.store') }}">
+                    {{ csrf_field() }}
                 <div class="row">
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="first-name" placeholder="*ΟΝΟΜΑ" required>
-                        <input type="text" class="form-control" name="last-name" placeholder="*ΕΠΩΝΥΜΟ" required>
+                        <input type="text" class="form-control" name="firstname" placeholder="*ΟΝΟΜΑ" required>
+                        <input type="text" class="form-control" name="lastname" placeholder="*ΕΠΩΝΥΜΟ" required>
                         <input type="email" class="form-control" name="email" placeholder="*EMAIL" required>
 
                     </div>
                     <div class="col-sm-6">
-                        <input type="tel" class="form-control" name="tel" placeholder="*ΤΗΛΕΦΩΝΟ" required>
+                        <input type="tel" class="form-control" name="mobiletel" placeholder="*ΤΗΛΕΦΩΝΟ" required>
                         <input type="text" class="form-control" name="company" placeholder="ΕΤΑΙΡΕΙΑ">
-                        <input type="text" class="form-control" name="address-line" placeholder="*ΔΙΕΥΘΥΝΣΗ" required>
+                        <input type="text" class="form-control" name="address" placeholder="*ΔΙΕΥΘΥΝΣΗ" required>
                     </div>
                 </div><!-- / row -->
 
                 <div class="row">
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="zip" placeholder="ΠΟΛΗ" required>
+                        <input type="text" class="form-control" name="city" placeholder="ΠΟΛΗ" required>
                       </div>
                       <div class="col-sm-6">
-                        <input type="text" class="form-control" name="zip" placeholder="ΤΑΧΥΔΡΟΜΙΚΟΣ ΚΩΔΙΚΑΣ" required>
+                        <input type="text" class="form-control" name="zipcode" placeholder="ΤΑΧΥΔΡΟΜΙΚΟΣ ΚΩΔΙΚΑΣ" required>
                     </div>
                 </div><!-- / row -->
 
                 <div class="checkout-form-footer space-left space-right">
-                    <textarea class="form-control" name="message" placeholder="ΜΗΝΥΜΑ" required></textarea>
-                    <a href="" class="btn btn-primary-filled btn-rounded"><i class="lnr lnr-cart"></i><span>Ολοκλήρωση παραγγελίας</span></a>
+                    <textarea class="form-control" name="notes" placeholder="ΜΗΝΥΜΑ" required></textarea>
+                    <button type="submit" class="btn btn-primary-filled btn-rounded">
+                        Ολοκλήρωση παραγγελίας
+                    </button>
+
                 </div><!-- / checkout-form-footer -->
 
             </div><!-- / checkout-form -->

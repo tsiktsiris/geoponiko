@@ -21,6 +21,7 @@ class CreateOrderProductsTable extends Migration
             $table->string("name");
             $table->integer("qty");
             $table->string("price");
+            $table->decimal('addcost',5,2)->nullable();
 
         });
     }

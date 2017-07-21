@@ -20,6 +20,14 @@ class HomeController extends Controller
       return view('frontend.home')->with('categories',$categories)->with('subcategories',$subcategories)->with('products',$products);
     }
 
+    public function order_completed()
+    {
+      $categories = Category::all();
+      $subcategories = SubCategory::all();
+
+      return view('frontend.order_complete')->with('categories',$categories)->with('subcategories',$subcategories);
+    }
+
     public function shop($cat)
     {
 

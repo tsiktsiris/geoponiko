@@ -119,7 +119,7 @@
             <!-- product -->
             <li class="col-xs-6 col-md-4 product m-product" data-groups='["womens", "accessories"]'>
                 <div class="img-bg-color primary">
-                    <h5 class="product-price"><del>159€</del> {{$product->price}}€</h5>
+                    <h5 class="product-price"><!--<del>159€</del>--> {{$product->price}}€</h5>
                     <a href="#" class="product-link"></a>
                     <!-- / product-link -->
                     @if($product->product_photo1)

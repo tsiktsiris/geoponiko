@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.backend.dashboard')
 @php ( $title='Χρήστης' )
 @php ( $description='Προσθήκη')
 @section('content')
@@ -19,7 +19,7 @@
 
         <div class="panel-body">
       <div class="col-md-12">
-              {{ Form::open(array('action' => 'UserController@store')) }}
+              {{ Form::open(array('action' => 'Admin\UserController@store')) }}
               <div class="row">
                 <div class="col-md-12">
                   {{ Form::label('Ονοματεπώνυμο') }}
@@ -52,7 +52,7 @@
 
                 <hr>
                 {{ Form::submit('Προσθήκη χρήστη',array('class' => 'btn btn-primary')) }}
-                <a class="btn btn-danger" href="{{ route('users.index')}}" role="button">Ακύρωση</a>
+                <a class="btn btn-danger" href="{{ route('backend.users.index')}}" role="button">Ακύρωση</a>
 
                 <!-- /.box-body -->
 

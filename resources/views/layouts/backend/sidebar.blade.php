@@ -34,14 +34,28 @@
 
       <!-- Optionally, you can add icons to the links-->
       <li class="{!! classActivePath('home') !!}"><a href="{{ route('backend.home') }}"><span>Αρχική</span></a></li>
-      <li class="{!! classActiveSegment(2,['orders']) !!}"><a href="{{ route('backend.home') }}"><span>Παραγγελίες</span></a></li>
       <li class="{!! classActiveSegment(2,['products']) !!}"><a href="{{ route('backend.products.index') }}"><span>Διαχείριση προϊόντων</span></a></li>
+      <li class="{!! classActiveSegment(2,['produ1cts']) !!}"><a href="#"><span>Προσφορές</span></a></li>
+      <li class="treeview {!! classActiveSegment(2,['orders']) !!}">
+        <a href="#"><span>Παραγγελίες</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+          <li class="{!! classActiveSegment(3,['unconfirmed']) !!}"><a href="{{route('backend.orders.unconfirmed.index')}}">Προς επιβεβαίωση</a></li>
+          <li class="{!! classActiveSegment(3,['queue']) !!}"><a href="#">Σε αναμονή</a></li>
+          <li class="{!! classActiveSegment(3,['completed']) !!}"><a href="#">Ολοκληρωμένες</a></li>
+        </ul>
+      </li>
 
       <li class="treeview {!! classActiveSegment(2,['categories']) !!}">
         <a href="#"><span>Κατηγορίες προϊόντων</span> <i class="fa fa-angle-left pull-right"></i></a>
         <ul class="treeview-menu">
           <li class="{!! classActiveSegment(3,['main']) !!}"><a href="{{route('backend.category.index')}}">Κατηγορίες</a></li>
           <li class="{!! classActiveSegment(3,['sub']) !!}"><a href="{{route('backend.subcategory.index')}}">Υποκατηγορίες</a></li>
+        </ul>
+      </li>
+      <li class="treeview {!! classActiveSegment(2,['users']) !!}">
+        <a href="#"><span>Χρήστες</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+          <li class="{!! classActiveSegment(3,['list','new','edit']) !!}"><a href="{{route('backend.users.index')}}">Διαχείριση χρηστών</a></li>
         </ul>
       </li>
 

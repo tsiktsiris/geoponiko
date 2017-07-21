@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration
             $table->timestamps();
             $table->string('firstname');
             $table->string('lastname');
+            $table->string('email');
             $table->string('mobiletel');
             $table->string('address');
             $table->string('city');
@@ -26,7 +27,10 @@ class CreateOrdersTable extends Migration
             $table->string('afm')->nullable();
             $table->string('company')->nullable();
             $table->boolean('invoice')->nullable();
-
+            $table->boolean('confirmed')->default(false);
+            $table->boolean('delivered')->default(false);
+            $table->boolean('completed')->default(false);
+            $table->decimal('addcost',5,2)->nullable();
         });
     }
 

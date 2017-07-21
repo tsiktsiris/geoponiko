@@ -10,10 +10,13 @@ class OrderController extends Controller
 {
 
 
-    public function index()
+    public function index_unconfirmed()
     {
       $items = Order::paginate(15);
-      return view('backend.category.index')->with('items',$items);
+      return view('backend.orders.unconfirmed.index')->with('items',$items);
     }
+
+
+
 
 }

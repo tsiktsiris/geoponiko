@@ -1,6 +1,7 @@
 @extends('layouts.backend.dashboard')
-@php ( $title='Χρήστες' )
-@php ( $description='Διαχείριση Χρηστών Πύλης')
+
+@php ( $title='Παραγγελίες' )
+@php ( $description='Προς Επιβεβαίωση')
 @section('content')
 <div class='row'>
 
@@ -16,7 +17,7 @@
     <div class="panel panel-default">
 
         <div class="panel-body">
-            <a class="btn btn-primary pull-left" href="{{route('backend.users.new')}}" role="button">Προσθήκη εγγραφής</a>
+            <a class="btn btn-primary pull-left" href="javascript:alert('Απενεργοποιημένο')" role="button">Προσθήκη εγγραφής</a>
 
 
         </div>
@@ -24,29 +25,27 @@
             <table class="table table-condensed table-striped table-hover">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th>ΟΝΟΜΑ</th>
-                        <th>EMAIL</th>
-                        <th>ΙΔΙΟΤΗΤΑ</th>
-                        <th>ΠΕΡΙΓΡΑΦΗ</th>
+                        <th>#</th>
+                        <th>ΗΜ ΠΑΡΑΓΓΕΛΙΑΣ</th>
+                        <th>ΟΝΟΜΑTEΠΩΝΥΜΟ</th>
+                        <th>ΠΕΡΙΟΧΗ</th>
+                        <th>ΔΙΕΥΘΥΝΣΗ</th>
+                        <th>ΤΗΛΕΦΩΝΟ</th>
                         <th>ΕΝΕΡΓΕΙΕΣ</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($users as $user)
+                    @forelse ($items as $item)
                     <tr>
-                        <td>{{str_pad($user->id, 5, "0", STR_PAD_LEFT)}}</td>
-                        <td><a href="#">{{$user->name}}</a></td>
-                        <td>{{$user->email}}</td>
-                        <td>
-                        {{  $user->getRole()->name}}
-                        </td>
-                        <td>
-                        {{  $user->getRole()->description}}
-                        </td>
+                        <td>{{ $item->id }}</td>
+                        <td><a href="#">{{ $item->created_at }}</a></td>
+                        <td><a href="#">{{ $item->lastname }} {{ $item->firstname }}</a></td>
+                        <td><a href="#">{{ $item->city }}</a></td>
+                        <td><a href="#">{{ $item->address }}</a></td>
+                        <td><a href="#">{{ $item->mobiletel }}</a></td>
                         <td width="250px">
-                          <a class="btn btn-primary btn-xs" href="{{route('backend.users.edit', $user->id )}}" role="button">Τροποποίηση</a>
-                          <a class="btn btn-danger btn-xs" href="{{route('backend.users.delete', $user->id )}}" role="button">Διαγραφή</a>
+                          <a class="btn btn-success btn-xs" href="#" role="button">Αποδοχή</a>
+                          <a class="btn btn-danger btn-xs" href="#" role="button">Απόρριψη</a>
 
                         </td>
                     </tr>

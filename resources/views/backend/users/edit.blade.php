@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.backend.dashboard')
 @php ( $title='Χρήστης' )
 @php ( $description='Επεξεργασία')
 @section('content')
@@ -19,7 +19,7 @@
 
         <div class="panel-body">
       <div class="col-md-12">
-              {{ Form::model($user, array('action' => 'UserController@update')) }}
+              {{ Form::model($user, array('action' => 'Admin\UserController@update')) }}
               {{ Form::hidden('id', $user->id) }}
               <div class="row">
                 <div class="col-md-12">
@@ -53,7 +53,7 @@
 
                 <hr>
                 {{ Form::submit('Ενημέρωση στοιχείων',array('class' => 'btn btn-primary')) }}
-                <a class="btn btn-danger" href="{{ route('osde.clients.index')}}" role="button">Ακύρωση</a>
+                <a class="btn btn-danger" href="{{ route('backend.users.index')}}" role="button">Ακύρωση</a>
 
                 <!-- /.box-body -->
 
