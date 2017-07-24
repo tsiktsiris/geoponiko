@@ -52,16 +52,15 @@
                     <br><br>
                     <p>{{$product->description}}</p>
                     <br>
-                    <br>
                     <div class="product-info">
                         <div class="info">
-                            <p><i class="lnr lnr-tag"></i><span>Τιμή: {{$product->price}}</span></p>
+                            <p><i class="lnr lnr-tag"></i><span>Τιμή: <b>{{$product->price}}€</b></span></p>
                         </div>
                         <div class="info">
-                            <p><i class="lnr lnr-heart"></i><span>Κατηγορία: <a href="#"> {{$product->getCategory->name}}</a></span></p>
+                            <p><i class="lnr lnr-heart"></i><span>Κατηγορία: <b><a href="#"> {{$product->getCategory->name}}</a></b></span></p>
                         </div>
                         <div class="info">
-                            <p><i class="lnr lnr-menu"></i><span>Κωδικός προϊόντος: {{str_pad($product->id,6,"0",STR_PAD_LEFT)}}</span></p>
+                            <p><i class="lnr lnr-menu"></i><span>Κωδικός προϊόντος: <b>{{str_pad($product->id,6,"0",STR_PAD_LEFT)}}</b></span></p>
                         </div>
                     </div><!-- / product-info -->
 
@@ -76,12 +75,9 @@
                         <a id="clink" href="{{route('frontend.cart.add',['id'=>$product->id,'qty'=>1] )}}" class="btn btn-primary-filled btn-rounded"><i class="lnr lnr-cart"></i><span> Προσθήκη στο καλάθι</span></a>
                         <a href="checkout.html" class="btn btn-success-filled btn-rounded"><i class="lnr lnr-heart"></i><span> Αγορά τώρα</span></a>
                     </div>
-
                 </div><!-- product-details -->
-
             </div><!-- / col-sm-4 col-md-3 -->
             <!-- / product sidebar area -->
-
         </div><!-- / row -->
 
         <div id="related-products">
