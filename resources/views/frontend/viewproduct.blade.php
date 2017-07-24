@@ -90,7 +90,7 @@
                 <!-- product -->
                 <li class="col-xs-6 col-md-4 product m-product" data-groups='["laptop"]'>
                     <div class="img-bg-color primary">
-                        <h5 class="product-price">{{$rel->price}}</h5>
+                        <h5 class="product-price">{{$rel->price}}€</h5>
                         <a href="single-product3.html" class="product-link"></a>
                         <!-- / product-link -->
                         <img src="{{asset('images/products/'.$rel->product_photo1)}}" alt="">
