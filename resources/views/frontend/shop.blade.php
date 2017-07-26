@@ -90,12 +90,11 @@
                     <h5 class="widget-title">ΚΑΤΗΓΟΡΙΕΣ</h5>
                     @foreach($categories as $category)
                     <p class="product-category">
-                        {{$category->name}}
+                        <b>{{$category->name}}</b>
                         <?php
                           $subcategories = $category->getSubCategories;
                         ?>
 
-                        <span class="pull-right">({{$category->getProducts->count()}})</span>
 
 
                         @foreach($category->getSubCategories as $subcat)
