@@ -90,24 +90,17 @@
                         <h5 class="product-price">{{$rel->price}}€</h5>
                         <a href="single-product3.html" class="product-link"></a>
                         <!-- / product-link -->
+                        <a href="{{route('frontend.viewproduct',$product->id)}}">
                         <img src="{{asset('images/products/'.$rel->product_photo1)}}" alt="">
                         <!-- / product-image -->
 
-                        <!-- product-hover-tools -->
-                        <div class="product-hover-tools">
-                            <a href="{{route('frontend.viewproduct',$rel->id)}}" class="view-btn" data-toggle="tooltip" title="View Product">
-                                <i class="lnr lnr-eye"></i>
-                            </a>
-                            <a href="shopping-cart.html" class="cart-btn" data-toggle="tooltip" title="Add to Cart">
-                                <i class="lnr lnr-cart"></i>
-                            </a>
-                        </div><!-- / product-hover-tools -->
 
                         <!-- product-details -->
                         <div class="product-details">
                             <h5 class="product-title">{{$rel->name}}</h5>
                             <p class="product-category">{{$rel->getCategory->name}}</p>
                         </div><!-- / product-details -->
+                      </a>
                     </div><!-- / img-bg-color -->
                 </li>
                 <!-- / product -->

@@ -27,15 +27,18 @@
                 @foreach($products as $product)
 
                     <!-- product -->
-                    <li class="col-xs-6 product m-product" data-groups='["bedroom"]'>
+
+                    <li class="col-xs-4 product m-product" data-groups='["bedroom"]'>
+
                         <div class="img-bg-color primary">
                             <h5 class="product-price">{{$product->price}}€</h5>
                             <a href="single-product2.html" class="product-link"></a>
                             <!-- / product-link -->
+                            <a href="{{route('frontend.viewproduct',$product->id)}}">
                             <img src="{{asset('/images/products/'.$product->product_photo1)}}" alt="">
                             <!-- / product-image -->
 
-                            <!-- product-hover-tools -->
+                            <!-- product-hover-tools
                             <div class="product-hover-tools">
                                 <a href="{{route('frontend.viewproduct',$product->id)}}" class="view-btn" data-toggle="tooltip" title="Προβολή">
                                     <i class="lnr lnr-eye"></i>
@@ -43,21 +46,24 @@
                                 <a href="{{route('frontend.cart.add',['id'=>$product->id,'qty'=>1] )}}" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
                                     <i class="lnr lnr-cart"></i>
                                 </a>
-                            </div><!-- / product-hover-tools -->
+                            </div> / product-hover-tools -->
 
                             <!-- product-details -->
                             <div class="product-details">
                                 <h5 class="product-title">{{$product->name}}</h5>
                                 <p class="product-category">{{$product->getCategory->name}}</p>
                             </div><!-- / product-details -->
+                            </a>
                         </div><!-- / img-bg-color -->
+
                     </li>
+
                     <!-- / product -->
                     @endforeach
 
 
-                    <!-- sizer -->
-                    <li class="col-xs-6 shuffle_sizer"></li>
+                    <!-- sizer
+                    <li class="col-xs-3 shuffle_sizer"></li>
                     <!-- / sizer -->
 
                 </ul> <!-- / products -->

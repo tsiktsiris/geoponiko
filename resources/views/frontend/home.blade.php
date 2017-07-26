@@ -117,34 +117,34 @@
 
             @foreach($products as $product)
             <!-- product -->
-            <li class="col-xs-6 col-md-4 product m-product" data-groups='["womens", "accessories"]'>
+            <li class="col-xs-4 product m-product" data-groups='["bedroom"]'>
+
                 <div class="img-bg-color primary">
-                    <h5 class="product-price"><!--<del>159€</del>--> {{$product->price}}€</h5>
-                    <a href="#" class="product-link"></a>
+                    <h5 class="product-price">{{$product->price}}€</h5>
+                    <a href="single-product2.html" class="product-link"></a>
                     <!-- / product-link -->
-                    @if($product->product_photo1)
-                      <img width=500 height=400 src="{{asset('images/products/'.$product->product_photo1)}}" alt="">
-                    @else
-                      <img src="http://placehold.it/900x1200" alt="">
-                    @endif
+                    <a href="{{route('frontend.viewproduct',$product->id)}}">
+                    <img src="{{asset('/images/products/'.$product->product_photo1)}}" alt="">
                     <!-- / product-image -->
 
-                    <!-- product-hover-tools -->
+                    <!-- product-hover-tools
                     <div class="product-hover-tools">
-                        <a href="{{route('frontend.viewproduct',$product->id)}}" class="view-btn" data-toggle="tooltip" title="Προβολή προϊόντος">
+                        <a href="{{route('frontend.viewproduct',$product->id)}}" class="view-btn" data-toggle="tooltip" title="Προβολή">
                             <i class="lnr lnr-eye"></i>
                         </a>
-                        <a href="#" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
+                        <a href="{{route('frontend.cart.add',['id'=>$product->id,'qty'=>1] )}}" class="cart-btn" data-toggle="tooltip" title="Προσθήκη στο καλάθι">
                             <i class="lnr lnr-cart"></i>
                         </a>
-                    </div><!-- / product-hover-tools -->
+                    </div> / product-hover-tools -->
 
                     <!-- product-details -->
                     <div class="product-details">
                         <h5 class="product-title">{{$product->name}}</h5>
                         <p class="product-category">{{$product->getCategory->name}}</p>
                     </div><!-- / product-details -->
+                    </a>
                 </div><!-- / img-bg-color -->
+
             </li>
             <!-- / product -->
             @endforeach

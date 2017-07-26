@@ -2398,7 +2398,8 @@ section {
 }
 
 .product .img-bg-color.primary {
-  background: rgb(92,148,71);
+  #background: linear-gradient(white 180px ,rgb(92,148,71));
+  background:white;
 }
 
 .product .img-bg-color.default {
@@ -2501,7 +2502,7 @@ section {
 }
 
 .product-title {
-  color: white;
+  color: rgb(20,20,20);
   font-size: 14px;
   letter-spacing: 0.1em;
   margin-bottom: 3px;
@@ -2529,9 +2530,9 @@ section {
 }
 
 .product .product-category {
-  color: #f8f8f8;
-  font-size: 10px;
-  font-weight: 500;
+  color: rgb(20,20,20);
+  font-size: 12px;
+  font-weight: 200;
   letter-spacing: 0.1em;
 }
 
