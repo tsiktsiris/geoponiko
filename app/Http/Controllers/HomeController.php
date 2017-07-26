@@ -32,9 +32,9 @@ class HomeController extends Controller
     {
 
       if($cat==0)
-        $products = Product::orderBy('id', 'desc')->paginate(4);
+        $products = Product::orderBy('id', 'desc')->paginate(9);
       else
-        $products = Product::where('subcategory_id',$cat)->orderBy('id', 'desc')->paginate(4);
+        $products = Product::where('subcategory_id',$cat)->orderBy('id', 'desc')->paginate(9);
 
 
       $categories = Category::all();
