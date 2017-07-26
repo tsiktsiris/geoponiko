@@ -90,8 +90,19 @@
                     <h5 class="widget-title">ΚΑΤΗΓΟΡΙΕΣ</h5>
                     @foreach($categories as $category)
                     <p class="product-category">
-                        <a href="#">{{$category->name}}</a>
+                        {{$category->name}}
+                        <?php
+                          $subcategories = $category->getSubCategories;
+                        ?>
+
                         <span class="pull-right">({{$category->getProducts->count()}})</span>
+
+
+                        @foreach($category->getSubCategories as $subcat)
+                          <p style="padding-left:0px"><a href="{{route('frontend.shop',$subcat->id)}}"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> {{$subcat->name}}</a>
+                            <span class="pull-right">({{$subcat->getProducts->count()}})</span>
+                          </p>
+                        @endforeach
                     </p><!-- / category -->
                     @endforeach
 
