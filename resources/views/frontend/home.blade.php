@@ -142,7 +142,7 @@
                     <!-- product-details -->
                     <div class="product-details">
                         <h5 class="product-title">{{$product->name}}</h5>
-                        <p class="product-category">ΚΑΤΗΓΟΡΙΑ</p>
+                        <p class="product-category">{{$product->getCategory->name}}</p>
                     </div><!-- / product-details -->
                 </div><!-- / img-bg-color -->
             </li>
