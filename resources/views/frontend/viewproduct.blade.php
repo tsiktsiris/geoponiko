@@ -90,7 +90,7 @@
                         <h5 class="product-price">{{$rel->price}}€</h5>
                         <a href="single-product3.html" class="product-link"></a>
                         <!-- / product-link -->
-                        <a href="{{route('frontend.viewproduct',$product->id)}}">
+                        <a href="{{route('frontend.viewproduct',$rel->id)}}">
                         <img src="{{asset('images/products/'.$rel->product_photo1)}}" alt="">
                         <!-- / product-image -->
 
