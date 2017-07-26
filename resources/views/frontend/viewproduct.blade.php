@@ -81,12 +81,9 @@
         </div><!-- / row -->
 
         <div id="related-products">
-
             <h4 class="space-top-30 space-bottom-30 space-left">ΣΧΕΤΙΚΑ ΠΡΟΪΟΝΤΑ</h4>
             <ul class="row shop list-unstyled" id="grid">
-
                 @foreach($related as $rel)
-
                 <!-- product -->
                 <li class="col-xs-6 col-md-4 product m-product" data-groups='["laptop"]'>
                     <div class="img-bg-color primary">
@@ -115,7 +112,6 @@
                 </li>
                 <!-- / product -->
                 @endforeach
-
             </ul><!-- / row -->
         </div><!-- / related-products -->
 

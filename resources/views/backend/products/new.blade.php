@@ -47,7 +47,7 @@
               <div class="row">
                 <div class="col-md-2">
                   {{ Form::label('Τιμή (σε Ευρώ)') }}
-                  {{ Form::number('price', null,array('class' => 'form-control')) }}
+                  {{ Form::number('price', null, array('class' => 'form-control','step'=>'0.01', 'pattern'=>"[0-9]+([\.,][0-9]+)?")) }}
                 </div>
               </div>
                 <hr>
