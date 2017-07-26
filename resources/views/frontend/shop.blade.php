@@ -63,7 +63,12 @@
                 </ul> <!-- / products -->
 
                 <div class="text-center more-button space-top-30">
-                    <a href="#x" class="btn btn-default-filled"><i class="lnr lnr-sync"></i><span>LOAD MORE</span></a>
+                  @if($products->currentPage() > 1)
+                    <a href="{{$products->previousPageUrl()}}" class="btn btn-default-filled"><i class="lnr lnr-arrow-left"></i><span></span>ΠΡΟΗΓΟΥΜΕΝΟ</a>
+                  @endif
+                  @if($products->hasMorePages())
+                    <a href="{{$products->nextPageUrl()}}" class="btn btn-default-filled"><i class="lnr lnr-arrow-right"></i><span></span>ΕΠΟΜΕΝΟ</a>
+                    @endif
                 </div>
 
             </div><!-- / content-area -->
