@@ -94,9 +94,6 @@
                         <?php
                           $subcategories = $category->getSubCategories;
                         ?>
-
-
-
                         @foreach($category->getSubCategories as $subcat)
                           <p style="padding-left:0px"><a href="{{route('frontend.shop',$subcat->id)}}"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> {{$subcat->name}}</a>
                             <span class="pull-right">({{$subcat->getProducts->count()}})</span>

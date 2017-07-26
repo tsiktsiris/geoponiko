@@ -13,6 +13,8 @@
     </div><!-- / banner-content -->
 </div>
 <!-- / header-banner -->
+<!-- Use a button to open the snackbar -->
+
 
 <!-- collections -->
 <section id="collections">

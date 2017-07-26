@@ -48,7 +48,7 @@
 <div id="top"></div>
 
 @include('layouts.frontend.header')
-
+<div id="snackbar">Το προϊόν προστέθηκε στο καλάθι σας   <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
 <!-- content -->
 @yield('content')
 <!-- / content -->

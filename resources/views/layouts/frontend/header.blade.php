@@ -14,7 +14,7 @@
                 <a class="navbar-brand" href="index.html"><img src="{{asset('./images/logo-lg.png')}}" alt="logo"></a>
             </div><!-- / navbar-header <span class="cart-badge">2</span> -->
             <div class="secondary-nav">
-                <a href="#" class="my-account space-right"><i class="fa fa-user"></i> </a>
+                <!--<a href="#" class="my-account space-right"><i class="fa fa-user"></i> </a>-->
                 <a href="{{route('frontend.cart')}}" class="shopping-cart"><i class="fa fa-shopping-cart"></i>
 
                   <?php

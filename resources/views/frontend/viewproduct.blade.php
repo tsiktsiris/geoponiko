@@ -72,7 +72,7 @@
 
                         <div class="space-25">&nbsp;</div>
 
-                        <a id="clink" href="{{route('frontend.cart.add',['id'=>$product->id,'qty'=>1] )}}" class="btn btn-primary-filled btn-rounded"><i class="lnr lnr-cart"></i><span> Προσθήκη στο καλάθι</span></a>
+                        <a id="clink" onclick="MyFunction();" href="{{route('frontend.cart.add',['id'=>$product->id,'qty'=>1] )}}" class="btn btn-primary-filled btn-rounded"><i class="lnr lnr-cart"></i><span> Προσθήκη στο καλάθι</span></a>
                         <a href="checkout.html" class="btn btn-success-filled btn-rounded"><i class="lnr lnr-heart"></i><span> Αγορά τώρα</span></a>
                     </div>
                 </div><!-- product-details -->
