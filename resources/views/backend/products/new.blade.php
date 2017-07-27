@@ -50,15 +50,11 @@
                   {{ Form::number('price', null, array('class' => 'form-control','step'=>'0.01', 'pattern'=>"[0-9]+([\.,][0-9]+)?")) }}
                 </div>
               </div>
-                <hr>
+                <br>
                 {{ Form::submit('Προσθήκη εγγραφής',array('class' => 'btn btn-primary')) }}
                 <a class="btn btn-danger" href="{{ route('backend.category.index')}}" role="button">Ακύρωση</a>
 
-                <!-- /.box-body -->
 
-                <div class="box-footer">
-
-                </div>
               </form>
   </div>
 </div>
