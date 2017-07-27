@@ -34,7 +34,7 @@
                 </div><!-- / row -->
 
                 <div class="checkout-form-footer space-left space-right">
-                    <textarea class="form-control" name="notes" placeholder="ΜΗΝΥΜΑ" required></textarea>
+                    <textarea class="form-control" name="notes" placeholder="ΜΗΝΥΜΑ"></textarea>
                     <button type="submit" class="btn btn-primary-filled btn-rounded">
                         Ολοκλήρωση παραγγελίας
                     </button>
