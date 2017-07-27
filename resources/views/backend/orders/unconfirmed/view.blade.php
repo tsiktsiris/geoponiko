@@ -85,13 +85,13 @@
                       <th>#</th>
                       <th>Προϊόν</th>
                       <th>Ποσότητα</th>
-                      <th>Τιμή</th>
+                      <th>Τιμή/Τεμάχιο</th>
                     </tr>
                     @foreach($item->getProducts as $prod)
                     <tr>
                       <td>{{$prod->id}}</td>
                       <td>{{$prod->name}}</td>
-                      <td>{{$prod->qty}}</td>
+                      <td>{{$prod->qty}}x</td>
                       <td>{{$prod->price}}€</td>
                     </tr>
                     @endforeach

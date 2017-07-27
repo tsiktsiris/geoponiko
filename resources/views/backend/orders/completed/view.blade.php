@@ -25,7 +25,7 @@
             <a class="btn btn-success btn" href="{{route('backend.orders.finish', $item->id)}}" role="button"><i class="fa fa-check" aria-hidden="true"></i> Ολοκλήρωση αποστολής</a>
             @else
 
-            
+
             @endif
          </div>
           <h4 style="padding-top:10px">Αναλυτική προβολή παραγγελίας</h4>
@@ -88,13 +88,13 @@
                       <th>#</th>
                       <th>Προϊόν</th>
                       <th>Ποσότητα</th>
-                      <th>Τιμή</th>
+                      <th>Τιμή/Τεμάχιο</th>
                     </tr>
                     @foreach($item->getProducts as $prod)
                     <tr>
                       <td>{{$prod->id}}</td>
                       <td>{{$prod->name}}</td>
-                      <td>{{$prod->qty}}</td>
+                      <td>{{$prod->qty}}x</td>
                       <td>{{$prod->price}}€</td>
                     </tr>
                     @endforeach
