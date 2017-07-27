@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Order;
-use App\OrderDetail;
+use App\OrderProduct;
 
 class OrderController extends Controller
 {
@@ -12,11 +12,45 @@ class OrderController extends Controller
 
     public function index_unconfirmed()
     {
-      $items = Order::paginate(15);
+      $items = Order::where('confirmed',0)->paginate(15);
       return view('backend.orders.unconfirmed.index')->with('items',$items);
     }
 
+    public function index_packaging()
+    {
+      $items = Order::where('confirmed',1)->paginate(15);
+      return view('backend.orders.packaging.index')->with('items',$items);
+    }
+    public function index_completed()
+    {
+      $items = Order::where('confirmed',2)->paginate(15);
+      return view('backend.orders.completed.index')->with('items',$items);
+    }
 
+    public function confirm($id)
+    {
+      $order = Order::find($id);
+      $order -> confirmed = 1;
+      $order -> save();
+
+      return redirect()->back();
+    }
+
+
+    public function cancel($id)
+    {
+
+      $order_products = OrderProduct::where('order_id',$id)->get();
+      //dd($order_products);
+      foreach($order_products as $order_product)
+        $order_product->delete();
+
+
+      $order = Order::find($id);
+      $order->delete();
+
+      return redirect()->back();
+    }
 
 
 }

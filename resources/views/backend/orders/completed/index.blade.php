@@ -1,7 +1,7 @@
 @extends('layouts.backend.dashboard')
 
 @php ( $title='Παραγγελίες' )
-@php ( $description='Προς Επιβεβαίωση')
+@php ( $description='Ολοκληρωμένες')
 @section('content')
 <div class='row'>
 
