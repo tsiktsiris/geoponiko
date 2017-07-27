@@ -16,6 +16,24 @@ class OrderController extends Controller
       return view('backend.orders.unconfirmed.index')->with('items',$items);
     }
 
+
+    public function view_unconfirmed($id)
+    {
+      $item = Order::find($id);
+      return view('backend.orders.unconfirmed.view')->with('item',$item);
+    }
+
+    public function view_packaging($id)
+    {
+      $item = Order::find($id);
+      return view('backend.orders.packaging.view')->with('item',$item);
+    }
+
+    public function view_completed($id)
+    {
+      $item = Order::find($id);
+      return view('backend.orders.completed.view')->with('item',$item);
+    }
     public function index_packaging()
     {
       $items = Order::where('confirmed',1)->paginate(15);
@@ -30,10 +48,21 @@ class OrderController extends Controller
     public function confirm($id)
     {
       $order = Order::find($id);
+
       $order -> confirmed = 1;
       $order -> save();
 
-      return redirect()->back();
+      return redirect()->route('backend.orders.unconfirmed.index');
+    }
+
+    public function finish($id)
+    {
+      $order = Order::find($id);
+
+      $order -> confirmed = 2;
+      $order -> save();
+
+      return redirect()->route('backend.orders.packaging.index');
     }
 
 

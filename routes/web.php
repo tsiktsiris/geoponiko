@@ -55,9 +55,14 @@ Route::group(['prefix' => 'admin'], function () {
   Route::post('/categories/sub/store', 'Admin\SubCategoryController@store')->name('backend.subcategory.store');
 
   Route::get('/orders/unconfirmed', 'Admin\OrderController@index_unconfirmed')->name('backend.orders.unconfirmed.index');
+  Route::get('/orders/unconfirmed/view/{id}', 'Admin\OrderController@view_unconfirmed')->name('backend.orders.unconfirmed.view');
+
   Route::get('/orders/confirm/{id}', 'Admin\OrderController@confirm')->name('backend.orders.confirm');
+  Route::get('/orders/finish/{id}', 'Admin\OrderController@finish')->name('backend.orders.finish');
   Route::get('/orders/cancel/{id}', 'Admin\OrderController@cancel')->name('backend.orders.cancel');
   Route::get('/orders/packaging', 'Admin\OrderController@index_packaging')->name('backend.orders.packaging.index');
+  Route::get('/orders/packaging/view/{id}', 'Admin\OrderController@view_packaging')->name('backend.orders.packaging.view');
+  Route::get('/orders/completed/view/{id}', 'Admin\OrderController@view_completed')->name('backend.orders.completed.view');
   Route::get('/orders/completed', 'Admin\OrderController@index_completed')->name('backend.orders.completed.index');
 
 });

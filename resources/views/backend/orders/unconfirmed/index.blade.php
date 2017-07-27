@@ -25,21 +25,20 @@
                         <th>ΠΕΡΙΟΧΗ</th>
                         <th>ΔΙΕΥΘΥΝΣΗ</th>
                         <th>ΤΗΛΕΦΩΝΟ</th>
-                        <th>ΕΝΕΡΓΕΙΕΣ</th>
+                        <th class="text-center">ΕΝΕΡΓΕΙΕΣ</th>
                     </tr>
                 </thead>
                 <tbody>
                     @forelse ($items as $item)
                     <tr>
                         <td>{{ $item->id }}</td>
-                        <td><a href="#">{{ $item->created_at }}</a></td>
-                        <td><a href="#">{{ $item->lastname }} {{ $item->firstname }}</a></td>
-                        <td><a href="#">{{ $item->city }}</a></td>
-                        <td><a href="#">{{ $item->address }}</a></td>
-                        <td><a href="#">{{ $item->mobiletel }}</a></td>
-                        <td width="250px">
-                          <a class="btn btn-success btn-xs" href="{{route('backend.orders.confirm', $item->id)}}" role="button">Αποδοχή</a>
-                          <a class="btn btn-danger btn-xs" href="{{route('backend.orders.cancel', $item->id)}}" role="button">Απόρριψη</a>
+                        <td>{{ $item->created_at }}</td>
+                        <td>{{ $item->lastname }} {{ $item->firstname }}</td>
+                        <td>{{ $item->city }}</td>
+                        <td>{{ $item->address }}</td>
+                        <td>{{ $item->mobiletel }}</td>
+                        <td width="100px">
+                          <a class="btn btn-primary btn-block btn-xs" href="{{route('backend.orders.unconfirmed.view', $item->id)}}" role="button">Προβολή</a>
                         </td>
                     </tr>
                     @empty
