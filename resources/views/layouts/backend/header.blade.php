@@ -2,7 +2,7 @@
 <header class="main-header">
 
   <!-- Logo -->
-  <a href="{{route('backend.home')}}" class="logo"><b>Γ. Κ. </b>ΙΣΤΙΑΙΑΣ</a>
+  <a href="{{route('backend.home')}}" class="logo">www.agro2all.gr</a>
 
   <!-- Header Navbar -->
   <nav class="navbar navbar-static-top" role="navigation">

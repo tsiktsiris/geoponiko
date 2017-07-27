@@ -1,6 +1,6 @@
 @extends('layouts.backend.dashboard')
-@php ( $title='ΑΓΡΟΣΥΜΒ' )
-@php ( $description='Πλατφόρμα Διαχείρισης')
+@php ( $title='www.agro2all.gr' )
+@php ( $description='Περιοχή Διαχείρισης')
 
 
 @section('content')
