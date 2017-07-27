@@ -47,8 +47,8 @@
                 <h4>Σύνολο παραγγελίας: <span>{{$cart->getTotal()}} €</span></h4>
                 <p>*Η τιμή περιλαμβάνει μεταφορικά και ΦΠΑ</p>
                 <div class="cart-total-footer">
-                    <a href="shopping-cart.html" class="btn btn-default-filled btn-rounded"><i class="lnr lnr-arrow-left"></i><span>Πίσω στο καλάθι</span></a>
-                    <a href="shop-right.html" class="btn btn-primary-filled btn-rounded"><i class="lnr lnr-store"></i><span>Πίσω στα προϊόντα</span></a>
+                    <a href="{{route('frontend.cart')}}" class="btn btn-default-filled btn-rounded"><i class="lnr lnr-arrow-left"></i><span>Πίσω στο καλάθι</span></a>
+                    
                 </div><!-- / cart-total-footer -->
             </div><!-- / checkout-total -->
 
