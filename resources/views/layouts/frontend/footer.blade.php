@@ -26,10 +26,10 @@
                             <p><i class="lnr lnr-map-marker"></i><span>1o χλμ Ιστιαίας-Αιδηψού</span></p>
                         </div>
                         <div class="info">
-                            <a href="tel:+0123456789"><i class="lnr lnr-phone-handset"></i><span>+30 22260 53649</span></a>
+                            <a href="tel:+0123456789"><i class="lnr lnr-phone-handset"></i><span>+30 2226053649</span></a>
                         </div>
                         <div class="info">
-                            <a href="mailto:baroutis.d.86@gmail.com"><i class="lnr lnr-envelope"></i><span>baroutis.d.86@gmail.com</span></a>
+                            <a href="mailto:baroutis.d.86@gmail.com"><i class="lnr lnr-envelope"></i><span>info@agro2all.gr</span></a>
                         </div>
                         <div class="info">
                             <i class="lnr lnr-thumbs-up"></i>

@@ -58,6 +58,7 @@
                 <button class="btn btn-default-filled btn-rounded" type="button"><i class="lnr lnr-sync"></i> <span>Ανανέωση καλαθιού</span></button>
             </div><!-- / update-cart -->
 
+
             <div class="col-sm-6 cart-total">
             @if($items->count()>0)
 

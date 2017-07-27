@@ -48,8 +48,18 @@
                 <p>*Η τιμή περιλαμβάνει μεταφορικά και ΦΠΑ</p>
                 <div class="cart-total-footer">
                     <a href="{{route('frontend.cart')}}" class="btn btn-default-filled btn-rounded"><i class="lnr lnr-arrow-left"></i><span>Πίσω στο καλάθι</span></a>
-                    
+
                 </div><!-- / cart-total-footer -->
+
+                <hr>
+                <h5 style="padding-top:20px"> Επιλέξτε τρόπο πληρωμής </h5>
+                <input type="radio" name="payment" value="katathesi"> Κατάθεση σε λογαριασμό<br>
+                <input type="radio" name="payment" value="antikatavoli"> Με αντικαταβολή<br>
+
+                <br><br>
+                * Με αντικαταβολή υπάρχει επιβάρυνση 3.5€ στο γενικό σύνολο
+
+
             </div><!-- / checkout-total -->
 
         </div><!-- / row -->
