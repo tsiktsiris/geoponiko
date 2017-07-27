@@ -39,9 +39,25 @@
       <li class="treeview {!! classActiveSegment(2,['orders']) !!}">
         <a href="#"><span>Παραγγελίες</span> <i class="fa fa-angle-left pull-right"></i></a>
         <ul class="treeview-menu">
-          <li class="{!! classActiveSegment(3,['unconfirmed']) !!}"><a href="{{route('backend.orders.unconfirmed.index')}}">Προς επιβεβαίωση</a></li>
-          <li class="{!! classActiveSegment(3,['packaging']) !!}"><a href="{{route('backend.orders.packaging.index')}}">Σε αναμονή</a></li>
-          <li class="{!! classActiveSegment(3,['completed']) !!}"><a href="{{route('backend.orders.completed.index')}}">Ολοκληρωμένες</a></li>
+          <li class="{!! classActiveSegment(3,['unconfirmed']) !!}"><a href="{{route('backend.orders.unconfirmed.index')}}">Προς επιβεβαίωση
+            <span class="pull-right-container"><span class="label label-success pull-right">
+              {{DB::table('orders')->where('confirmed',0)->count()}}
+              </span></span>
+                </a>
+              </li>
+          <li class="{!! classActiveSegment(3,['packaging']) !!}"><a href="{{route('backend.orders.packaging.index')}}">Σε αναμονή
+            <span class="pull-right-container"><span class="label label-success pull-right">
+              {{DB::table('orders')->where('confirmed',1)->count()}}
+              </span></span>
+                </a>
+              </li>
+          <li class="{!! classActiveSegment(3,['completed']) !!}"><a href="{{route('backend.orders.completed.index')}}">Ολοκληρωμένες
+
+            <span class="pull-right-container"><span class="label label-success pull-right">
+              {{DB::table('orders')->where('confirmed',2)->count()}}
+              </span></span>
+                </a>
+          </li>
         </ul>
       </li>
 
