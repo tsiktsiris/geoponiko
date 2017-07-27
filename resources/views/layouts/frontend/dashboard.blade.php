@@ -72,7 +72,11 @@
 <script src="{{asset('js/custom.js')}}"></script>
 <script src="{{asset('js/jquery.shuffle.min.js')}}"></script>
 <!-- / shop -->
-
+@if(Session::has('item_added'))
+    <script>
+      myFunction();
+    </script>
+@endif
 <!-- brands carousel -->
 <script src="{{asset('js/owl.carousel.min.js')}}"></script>
 <script>

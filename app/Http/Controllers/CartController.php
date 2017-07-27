@@ -53,6 +53,7 @@ class CartController extends Controller
           'product_photo1' => $product->product_photo1
       ]);
 
+      Session::flash('item_added', '1');
       return redirect()->back();
     }
 
