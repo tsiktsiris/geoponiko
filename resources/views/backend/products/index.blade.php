@@ -35,7 +35,7 @@
                     <tr>
                         <td>{{$item->id}}</td>
                         <td><a href="#">{{$item->name}}</a></td>
-                        <td><a href="#">{{$item->description}}</a></td>
+                        <td><a href="#">{{mb_strimwidth($item->description, 0, 100, "...")}}</a></td>
                         <td width="250px">
                           <a class="btn btn-primary btn-xs" href="#" role="button">Τροποποίηση</a>
                           <a class="btn btn-danger btn-xs" href="{{route('backend.products.delete',$item->id)}}" role="button">Διαγραφή</a>
