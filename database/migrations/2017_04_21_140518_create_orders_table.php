@@ -31,6 +31,7 @@ class CreateOrdersTable extends Migration
             $table->boolean('delivered')->default(false);
             $table->boolean('completed')->default(false);
             $table->decimal('addcost',5,2)->nullable();
+            $table->integer('payment');
         });
     }
 
