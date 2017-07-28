@@ -15,7 +15,7 @@
             </div><!-- / navbar-header <span class="cart-badge">2</span> -->
             <div class="secondary-nav">
                 <!--<a href="#" class="my-account space-right"><i class="fa fa-user"></i> </a>-->
-                <a href="{{route('frontend.cart')}}" class="shopping-cart"><i class="fa fa-shopping-cart"></i>
+                <a href="{{route('frontend.cart')}}" class="shopping-cart"> ΚΑΛΑΘΙ <i class="fa fa-shopping-cart"></i>
 
                   <?php
 
