@@ -55,7 +55,7 @@ class OrderController extends Controller
     Session::forget('phpcart');
 
     //dd($products);
-    return view('frontend.order_completed')->with('payment',$order->payment);
+    return view('frontend.order_complete')->with('payment',$order->payment);
   }
 
 }
