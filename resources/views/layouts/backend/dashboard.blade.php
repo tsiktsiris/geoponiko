@@ -177,7 +177,6 @@ body {
             });
             audio.play();
           }
-
           localStorage.setItem("unconfirmed", data);
           $(".label-unconfirmed").html('<span class="label-packaging label label-success pull-right">'+data+'</span>');
         }
