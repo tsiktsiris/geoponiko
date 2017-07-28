@@ -54,8 +54,11 @@ class OrderController extends Controller
 
     Session::forget('phpcart');
 
+    $categories = Category::all();
+    $subcategories = SubCategory::all();
+
     //dd($products);
-    return view('frontend.order_complete')->with('payment',$order->payment);
+    return view('frontend.order_complete')->with('categories',$categories)->with('subcategories',$subcategories)->with('payment',$order->payment);
   }
 
 }
