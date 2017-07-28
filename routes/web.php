@@ -33,6 +33,9 @@ Route::group(['prefix' => 'admin'], function () {
   Route::post('/login', 'Auth\LoginController@authenticate')->name('backend.authenticate');
   Route::get('/logout', 'Auth\LoginController@logout')->name('backend.logout');
 
+  Route::get('/ajax/orders_unconfirmed', 'Admin\OrderController@ajax_unconfirmed')->name('backend.ajax.unconfirmed');
+  Route::get('/ajax/orders_packaging', 'Admin\OrderController@ajax_packaging')->name('backend.ajax.packaging');
+
   Route::get('/products/index', 'Admin\ProductController@index')->name('backend.products.index');
   Route::get('/products/new', 'Admin\ProductController@new')->name('backend.products.new');
   Route::get('/products/edit/{id}', 'Admin\ProductController@edit')->name('backend.products.edit');

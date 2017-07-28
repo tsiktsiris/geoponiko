@@ -40,20 +40,20 @@
         <a href="#"><span>Παραγγελίες</span> <i class="fa fa-angle-left pull-right"></i></a>
         <ul class="treeview-menu">
           <li class="{!! classActiveSegment(3,['unconfirmed']) !!}"><a href="{{route('backend.orders.unconfirmed.index')}}">Προς επιβεβαίωση
-            <span class="pull-right-container">
+            <span class="pull-right-container label-unconfirmed">
               <?php
               if(DB::table('orders')->where('confirmed',0)->count()>0)
-              echo '<span class="label label-success pull-right">'.DB::table('orders')->where('confirmed',0)->count().'</span>'
+              echo '<span class=" label label-success pull-right">'.DB::table('orders')->where('confirmed',0)->count().'</span>'
               ?>
               </span>
                 </a>
               </li>
           <li class="{!! classActiveSegment(3,['packaging']) !!}"><a href="{{route('backend.orders.packaging.index')}}">Σε αναμονή
-            <span class="pull-right-container">
+            <span class="pull-right-container label-packaging">
 
               <?php
               if(DB::table('orders')->where('confirmed',1)->count()>0)
-              echo '<span class="label label-success pull-right">'.DB::table('orders')->where('confirmed',1)->count().'</span>'
+              echo '<span class= label label-success pull-right">'.DB::table('orders')->where('confirmed',1)->count().'</span>'
               ?>
 
             </span>

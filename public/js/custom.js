@@ -90,7 +90,6 @@ $(document).ready(function()
 
   //shuffleme.init(); //filter portfolio
 
-
 });
 
 function myFunction() {
@@ -101,5 +100,5 @@ function myFunction() {
     x.className = "show";
 
     // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
 }

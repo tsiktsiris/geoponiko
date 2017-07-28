@@ -81,5 +81,13 @@ class OrderController extends Controller
       return redirect()->back();
     }
 
+    public function ajax_unconfirmed()
+    {
+      return Order::where('confirmed',0)->count();
+    }
 
+    public function ajax_packaging()
+    {
+      return Order::where('confirmed',1)->count();
+    }
 }

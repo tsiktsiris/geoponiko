@@ -53,6 +53,8 @@ class OrderController extends Controller
     }
 
     Session::forget('phpcart');
+    
+    $cart->clear();
 
     $categories = Category::all();
     $subcategories = SubCategory::all();

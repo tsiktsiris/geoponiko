@@ -17,6 +17,9 @@ if (typeof jQuery === "undefined") {
 }
 
 
+
+
+
 var customScroll = $('.content-wrapper').slimScroll({
     size: '10px',
     height: $(this).height() - $(".main-footer").height() - 10,
