@@ -39,7 +39,7 @@
                 <div class="box-body no-padding">
                   <table class="table table-condensed">
                     <tr>
-                      <th></th>
+                      <th width="150px"></th>
                       <th></th>
                     </tr>
                     <tr>
