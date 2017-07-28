@@ -35,7 +35,7 @@ class OrderController extends Controller
 
     if($order->payment == 2)
       $order->addcost = "3.50";
-    
+
     $order->save();
 
     $cart = Session::get('phpcart');
@@ -55,7 +55,7 @@ class OrderController extends Controller
     Session::forget('phpcart');
 
     //dd($products);
-    return redirect()->route('frontend.order_completed');
+    return redirect()->route('frontend.order_completed')->with('payment',$order->payment);
   }
 
 }
