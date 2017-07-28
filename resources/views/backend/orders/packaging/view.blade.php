@@ -66,6 +66,10 @@
                     <td>Διεύθυνση</td>
                     <td>{{$item->address}}, {{$item->city}} TK {{$item->zipcode}}</td>
                   </tr>
+                  <tr>
+                    <td>Σημείωση από πελάτη</td>
+                    <td>{{$item->notes}}</td>
+                  </tr>
                 </table>
               </div>
               <!-- /.box-body -->
