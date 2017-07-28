@@ -73,7 +73,7 @@
                         <div class="space-25">&nbsp;</div>
 
                         <a id="clink" onclick="MyFunction();" href="{{route('frontend.cart.add',['id'=>$product->id,'qty'=>1] )}}" class="btn btn-primary-filled btn-rounded"><i class="lnr lnr-cart"></i><span> Προσθήκη στο καλάθι</span></a>
-                        <a href="checkout.html" class="btn btn-success-filled btn-rounded"><i class="lnr lnr-heart"></i><span> Αγορά τώρα</span></a>
+                        <a id="clink2"href="{{route('frontend.quickbuy',['id'=>$product->id,'qty'=>1] )}}" class="btn btn-success-filled btn-rounded"><i class="lnr lnr-heart"></i><span> Αγορά τώρα</span></a>
                     </div>
                 </div><!-- product-details -->
             </div><!-- / col-sm-4 col-md-3 -->
@@ -120,6 +120,7 @@ $('input[name*="quantity"]').change(function() {
   var l = target.lastIndexOf('/');
   target = target.substring(0, l);
   $("#clink").attr("href", target + '/'+$(this).val());
+  $("#clink2").attr("href", target + '/'+$(this).val());
 });
 </script>
 @endsection

@@ -21,6 +21,7 @@ Route::get('/cart/add/{id}/{qty}', 'CartController@add_item')->name('frontend.ca
 Route::get('/cart/update/{id}/{qty}', 'CartController@update_item')->name('frontend.cart.update');
 Route::get('/cart/remove/{id}', 'CartController@remove_item')->name('frontend.cart.remove');
 Route::get('/checkout', 'HomeController@checkout')->name('frontend.checkout');
+Route::get('/buy/{id}/{qty}', 'CartController@quickbuy')->name('frontend.quickbuy');
 
 
 Route::post('/order/store', 'OrderController@store')->name('frontend.order.store');

@@ -89,4 +89,27 @@ class CartController extends Controller
       return redirect()->back();
     }
 
+    public function quickbuy($id,$qty)
+    {
+
+      $product = Product::find($id);
+
+      $this->cart = Session::get('phpcart');
+
+      if(!$this->cart)
+      $this->cart = new Cart();
+
+      Session::put('phpcart', $this->cart);
+      $this->cart->add([
+          'id'       => $product->id,
+          'name'     => $product->name,
+          'quantity' => $qty,
+          'price'    => $product->price,
+          'product_photo1' => $product->product_photo1
+      ]);
+
+      Session::flash('item_added', '1');
+      return redirect()->route('frontend.checkout');
+    }
+
 }
