@@ -30,7 +30,12 @@ class OrderController extends Controller
     $order->afm = $request->afm;
     $order->company = $request->company;
     $order->invoice = $request->invoice;
+    $order->notes = $request->notes;
     $order->payment = $request->payment;
+
+    if($order->payment == 2)
+      $order->addcost = "3.50";
+    
     $order->save();
 
     $cart = Session::get('phpcart');
