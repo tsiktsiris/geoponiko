@@ -32,7 +32,7 @@
                     @forelse ($items as $item)
                     <tr>
                         <td>{{ $item->id }}</td>
-                        <td>{{ $item->created_at }}</td>
+                        <td>{{ \Carbon\Carbon::parse($item->created_at)->timezone('Europe/Athens')->format('d/m/Y H:i') }}</td>
                         <td>{{ $item->lastname }} {{ $item->firstname }}</td>
                         <td>{{ $item->city }}</td>
                         <td>{{ $item->address }}</td>

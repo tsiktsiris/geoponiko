@@ -48,7 +48,7 @@
                   </tr>
                   <tr>
                     <td>Hμ/νία παραγγελίας</td>
-                    <td>{{$item->created_at}}</td>
+                    <td>{{ \Carbon\Carbon::parse($item->created_at)->timezone('Europe/Athens')->format('d/m/Y H:i') }}</td>
                   </tr>
                   <tr>
                     <td>Ονοματεπώνυμο</td>
