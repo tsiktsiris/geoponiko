@@ -29,7 +29,7 @@
                         <th>EMAIL</th>
                         <th>ΙΔΙΟΤΗΤΑ</th>
                         <th>ΠΕΡΙΓΡΑΦΗ</th>
-                        <th>ΕΝΕΡΓΕΙΕΣ</th>
+                        <th class="text-center">ΕΝΕΡΓΕΙΕΣ</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,7 +44,7 @@
                         <td>
                         {{  $user->getRole()->description}}
                         </td>
-                        <td width="250px">
+                        <td width="150px">
                           <a class="btn btn-primary btn-xs" href="{{route('backend.users.edit', $user->id )}}" role="button">Τροποποίηση</a>
                           <a class="btn btn-danger btn-xs" href="{{route('backend.users.delete', $user->id )}}" role="button">Διαγραφή</a>
 

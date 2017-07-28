@@ -28,7 +28,7 @@
                         <th>ΟΝΟΜΑ</th>
                         <th>ΠΕΡΙΓΡΑΦΗ</th>
                         <th>ΚΑΤΗΓΟΡΙΑ</th>
-                        <th>ΕΝΕΡΓΕΙΕΣ</th>
+                        <th class="text-center">ΕΝΕΡΓΕΙΕΣ</th>
                     </tr>
                 </thead>
                 <tbody>
