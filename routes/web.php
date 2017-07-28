@@ -48,12 +48,16 @@ Route::group(['prefix' => 'admin'], function () {
 
   Route::get('/categories/main/index', 'Admin\CategoryController@index')->name('backend.category.index');
   Route::get('/categories/main/new', 'Admin\CategoryController@new')->name('backend.category.new');
+  Route::get('/categories/main/edit/{id}', 'Admin\CategoryController@edit')->name('backend.category.edit');
   Route::get('/categories/main/delete/{id}', 'Admin\CategoryController@delete')->name('backend.category.delete');
+  Route::post('/categories/main/update', 'Admin\CategoryController@update')->name('backend.category.update');
   Route::post('/categories/main/store', 'Admin\CategoryController@store')->name('backend.category.store');
 
   Route::get('/categories/sub/index', 'Admin\SubCategoryController@index')->name('backend.subcategory.index');
   Route::get('/categories/sub/new', 'Admin\SubCategoryController@new')->name('backend.subcategory.new');
+  Route::get('/categories/sub/edit/{id}', 'Admin\SubCategoryController@edit')->name('backend.subcategory.edit');
   Route::get('/categories/sub/delete/{id}', 'Admin\SubCategoryController@delete')->name('backend.subcategory.delete');
+  Route::post('/categories/sub/update', 'Admin\SubCategoryController@update')->name('backend.subcategory.update');
   Route::post('/categories/sub/store', 'Admin\SubCategoryController@store')->name('backend.subcategory.store');
 
   Route::get('/orders/unconfirmed', 'Admin\OrderController@index_unconfirmed')->name('backend.orders.unconfirmed.index');

@@ -24,6 +24,27 @@ class SubCategoryController extends Controller
       return view('backend.subcategory.new')->with('categories', $categories);
     }
 
+    public function edit($id)
+    {
+      $categories = Category::pluck('name','id');
+
+      $item = SubCategory::find($id);
+      return view('backend.subcategory.edit')->with('categories', $categories)->with('item',$item);
+    }
+
+    public function update(Request $request)
+    {
+      //dd($request->name);
+      $category =  SubCategory::find($request->id);
+      $category -> category_id = $request->category;
+      $category -> name = $request->name;
+      $category -> description = $request->description;
+      $category -> priority = 0;
+      $category -> save();
+
+      return redirect()->route('backend.subcategory.index');
+    }
+
     public function store(Request $request)
     {
       //dd($request->name);

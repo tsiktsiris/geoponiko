@@ -38,8 +38,8 @@
                         <td><a href="#">{{ $item->name }}</a></td>
                         <td><a href="#">{{ $item->description }}</a></td>
                         <td>{{ $categories[$item->category_id] }}</td>
-                        <td width="250px">
-                          <a class="btn btn-primary btn-xs" href="#" role="button">Τροποποίηση</a>
+                        <td width="150px">
+                          <a class="btn btn-primary btn-xs" href="{{route('backend.subcategory.edit',$item->id)}}" role="button">Τροποποίηση</a>
                           <a class="btn btn-danger btn-xs" href="#" role="button">Διαγραφή</a>
 
                         </td>

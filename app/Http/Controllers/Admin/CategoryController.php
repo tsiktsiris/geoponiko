@@ -20,6 +20,24 @@ class CategoryController extends Controller
       return view('backend.category.new');
     }
 
+    public function edit($id)
+    {
+      $item = Category::find($id);
+      return view('backend.category.edit')->with('item',$item);
+    }
+
+    public function update(Request $request)
+    {
+      //dd($request->name);
+      $category  = Category::find($request->id);
+      $category -> name = $request->name;
+      $category -> description = $request->description;
+      $category -> priority = 0;
+      $category -> save();
+
+      return redirect()->route('backend.category.index');
+    }
+
     public function store(Request $request)
     {
       //dd($request->name);
