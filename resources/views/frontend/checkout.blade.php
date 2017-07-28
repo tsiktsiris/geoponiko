@@ -53,8 +53,8 @@
 
                 <hr>
                 <h5 style="padding-top:20px"> Επιλέξτε τρόπο πληρωμής </h5>
-                <input type="radio" name="payment" value="katathesi"> Κατάθεση σε λογαριασμό<br>
-                <input type="radio" name="payment" value="antikatavoli"> Με αντικαταβολή<br>
+                <input type="radio" name="payment" value="1" required> Κατάθεση σε λογαριασμό<br>
+                <input type="radio" name="payment" value="2" required> Με αντικαταβολή<br>
 
                 <br><br>
                 * Με αντικαταβολή υπάρχει επιβάρυνση 3.5€ στο γενικό σύνολο

@@ -5008,7 +5008,7 @@ body.demo {
     padding: 16px; /* Padding */
     position: fixed; /* Sit on top of the screen */
     z-index: 1000000; /* Add a z-index if needed */
-    right: 60px; /* Center the snackbar */
+    right: 110px; /* Center the snackbar */
     top: 15px; /* 30px from the bottom */
 
 }
