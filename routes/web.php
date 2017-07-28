@@ -34,6 +34,8 @@ Route::group(['prefix' => 'admin'], function () {
 
   Route::get('/products/index', 'Admin\ProductController@index')->name('backend.products.index');
   Route::get('/products/new', 'Admin\ProductController@new')->name('backend.products.new');
+  Route::get('/products/edit/{id}', 'Admin\ProductController@edit')->name('backend.products.edit');
+  Route::post('/products/update', 'Admin\ProductController@update')->name('backend.products.update');
   Route::get('/products/delete/{id}', 'Admin\ProductController@delete')->name('backend.products.delete');
   Route::post('/products/store', 'Admin\ProductController@store')->name('backend.products.store');
 

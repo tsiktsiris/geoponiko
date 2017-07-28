@@ -27,7 +27,7 @@
                         <th></th>
                         <th>ΟΝΟΜΑ</th>
                         <th>ΠΕΡΙΓΡΑΦΗ</th>
-                        <th>ΕΝΕΡΓΕΙΕΣ</th>
+                        <th class="text-center">ΕΝΕΡΓΕΙΕΣ</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,9 +35,9 @@
                     <tr>
                         <td>{{$item->id}}</td>
                         <td>{{$item->name}}</td>
-                        <td>{{mb_strimwidth($item->description, 0, 80, "...")}}</td>
-                        <td width="250px">
-                          <a class="btn btn-primary btn-xs" href="#" role="button">Τροποποίηση</a>
+                        <td>{{mb_strimwidth($item->description, 0, 100, "...")}}</td>
+                        <td width="150px">
+                          <a class="btn btn-primary btn-xs" href="{{route('backend.products.edit',$item->id)}}" role="button">Τροποποίηση</a>
                           <a class="btn btn-danger btn-xs" href="{{route('backend.products.delete',$item->id)}}" role="button">Διαγραφή</a>
 
                         </td>
